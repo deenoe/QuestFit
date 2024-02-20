@@ -60,6 +60,7 @@ struct OnboardingView: View {
 struct SignUpView: View{
     var body: some View{
         Text("hello world!")
+        .navigationBarBackButtonHidden(true)
     }
 }
 
@@ -68,6 +69,5 @@ struct ContentView_Previews: PreviewProvider {
         NavigationView{
             OnboardingView()
         }
-        .navigationBarBackButtonHidden(true)
     }
 }
