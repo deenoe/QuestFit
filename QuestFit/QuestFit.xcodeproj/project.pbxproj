@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4EB4EF5D2B852FE300D08295 /* firstLogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4EF5C2B852FE300D08295 /* firstLogInView.swift */; };
+		4EB4EF5F2B8856FF00D08295 /* signUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4EF5E2B8856FF00D08295 /* signUpView.swift */; };
 		FD5C3EE52B7DC3FD007A8D5D /* QuestFitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5C3EE42B7DC3FD007A8D5D /* QuestFitApp.swift */; };
 		FD5C3EE72B7DC3FD007A8D5D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5C3EE62B7DC3FD007A8D5D /* ContentView.swift */; };
 		FD5C3EE92B7DC3FF007A8D5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD5C3EE82B7DC3FF007A8D5D /* Assets.xcassets */; };
@@ -14,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4EB4EF5C2B852FE300D08295 /* firstLogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstLogInView.swift; sourceTree = "<group>"; };
+		4EB4EF5E2B8856FF00D08295 /* signUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpView.swift; sourceTree = "<group>"; };
 		FD5C3EE12B7DC3FD007A8D5D /* QuestFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuestFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD5C3EE42B7DC3FD007A8D5D /* QuestFitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestFitApp.swift; sourceTree = "<group>"; };
 		FD5C3EE62B7DC3FD007A8D5D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +57,8 @@
 			children = (
 				FD5C3EE42B7DC3FD007A8D5D /* QuestFitApp.swift */,
 				FD5C3EE62B7DC3FD007A8D5D /* ContentView.swift */,
+				4EB4EF5C2B852FE300D08295 /* firstLogInView.swift */,
+				4EB4EF5E2B8856FF00D08295 /* signUpView.swift */,
 				FD5C3EE82B7DC3FF007A8D5D /* Assets.xcassets */,
 				FD5C3EEA2B7DC3FF007A8D5D /* Preview Content */,
 			);
@@ -137,7 +143,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EB4EF5F2B8856FF00D08295 /* signUpView.swift in Sources */,
 				FD5C3EE72B7DC3FD007A8D5D /* ContentView.swift in Sources */,
+				4EB4EF5D2B852FE300D08295 /* firstLogInView.swift in Sources */,
 				FD5C3EE52B7DC3FD007A8D5D /* QuestFitApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

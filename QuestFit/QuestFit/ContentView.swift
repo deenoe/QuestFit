@@ -57,17 +57,23 @@ struct OnboardingView: View {
         }
     }}
 
-struct SignUpView: View{
+
+
+struct MainView: View {
     var body: some View{
-        Text("hello world!")
+        Text("Main View")
+        
         .navigationBarBackButtonHidden(true)
     }
 }
+
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView{
             OnboardingView()
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
