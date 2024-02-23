@@ -12,7 +12,7 @@ struct QuestFitApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView{
-                //MainView()
+                //HomeView()
                 OnboardingView()
             }
         }

@@ -8,26 +8,34 @@
 import SwiftUI
 
 struct HomeView: View {
-    var body: some View{
+    // Define a state variable for the username
+    @State private var username: String = ""
+    
+    var body: some View {
         VStack {
             // Top section
             HStack {
-                
-                Image("frodge")
+                Text("Current Level: 1")
+                Spacer()
+                VStack{
+                    Image("frodge3")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 100, height: 100)
                         .clipShape(Circle())
                         .overlay(Circle().stroke(Color.white, lineWidth: 2))
                         .shadow(radius: 5)
-                Text("Current Level: 1")
+                        .offset(x:-23)
+                    Text(username)
+                        .offset(x:-23)
+                }
                 Spacer() // Spacer pushes the following views to the right
                 VStack{// Stacks Settings and locations
                     Button(action: {
                     // Implement action for settings button
-                }) {
-                    Text("Settings")
-                }
+                    }) {
+                        Text("Settings")
+                    }
                     Button(action: {
                         // Implement action for location button
                     }) {
@@ -52,8 +60,15 @@ struct HomeView: View {
                         Label("Leaderboards", systemImage: "sun.max.fill")
                     }
             }
-                .padding()
-                }
+            .padding()
+        }
+        .onAppear {
+            // Retrieve the username from UserDefaults
+            if let savedUsername = UserDefaults.standard.string(forKey: "username") {
+                self.username = savedUsername
+                print("Retrieved username:", savedUsername)
+            }
+        }
+        .navigationBarBackButtonHidden(true)
     }
 }
-
