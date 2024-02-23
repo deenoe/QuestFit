@@ -31,6 +31,12 @@ struct SignUpView: View {
                 // Set isSignedUp to true to trigger navigation
                 isSignedUp = true
             }) {
+                
+            }
+            .padding()
+            .disabled(username.isEmpty || password.isEmpty)
+            
+            NavigationLink(destination: HomeView()){
                 Text("Sign Up")
                     .font(.headline)
                     .fontWeight(.bold)
@@ -40,12 +46,7 @@ struct SignUpView: View {
                     .background(Color.blue)
                     .cornerRadius(8)
             }
-            .padding()
-            .disabled(username.isEmpty || password.isEmpty)
-            
-            NavigationLink(destination: MainView(), isActive: $isSignedUp) {
-                EmptyView()
-            }
+
             .navigationBarBackButtonHidden(true)
         }
     }
