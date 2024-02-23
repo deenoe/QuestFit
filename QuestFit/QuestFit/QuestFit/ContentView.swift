@@ -68,6 +68,5 @@ struct ContentView_Previews: PreviewProvider {
             //HomeView()
             OnboardingView()
         }
-        .navigationBarBackButtonHidden(true)
     }
 }
