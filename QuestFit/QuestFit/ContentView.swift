@@ -52,22 +52,8 @@ struct OnboardingView: View {
                         .padding()
                 
             }
-            
-                
         }
     }}
-
-
-
-struct MainView: View {
-    var body: some View{
-        Text("Main View")
-        
-        .navigationBarBackButtonHidden(true)
-    }
-}
-
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
