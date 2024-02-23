@@ -13,6 +13,7 @@ struct OnboardingView: View {
     let mainColor = Color(red: 0/255, green: 55/255, blue: 0/255)
     let accentColor = Color(red: 152/255, green: 158/255, blue: 143/255)
     
+    
     var body: some View {
         ZStack{
             RadialGradient(gradient: Gradient(colors: [mainColor, .white]), center: .center, startRadius: 0, endRadius: 2500) // Adjust the endRadius as needed
@@ -52,12 +53,19 @@ struct OnboardingView: View {
                         .padding()
                 
             }
+            
+                
         }
     }}
+
+
+
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView{
+            //HomeView()
             OnboardingView()
         }
         .navigationBarBackButtonHidden(true)

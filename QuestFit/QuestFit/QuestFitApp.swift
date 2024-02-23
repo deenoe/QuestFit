@@ -11,7 +11,10 @@ import SwiftUI
 struct QuestFitApp: App {
     var body: some Scene {
         WindowGroup {
-            OnboardingView()
+            NavigationView{
+                //HomeView()
+                OnboardingView()
+            }
         }
     }
 }
