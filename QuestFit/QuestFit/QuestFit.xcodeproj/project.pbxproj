@@ -65,12 +65,12 @@
 			children = (
 				FD5C3EE42B7DC3FD007A8D5D /* QuestFitApp.swift */,
 				FD5C3EE62B7DC3FD007A8D5D /* ContentView.swift */,
+				4EB4EF5E2B8856FF00D08295 /* signUpView.swift */,
 				4EB4EF662B89469900D08295 /* HomeView.swift */,
 				4EB4EF602B886BA300D08295 /* DailyQuestsView.swift */,
 				4EB4EF622B886BC700D08295 /* WorkoutLogView.swift */,
 				4EB4EF642B886BE100D08295 /* LeaderboardView.swift */,
 				4EB4EF5C2B852FE300D08295 /* firstLogInView.swift */,
-				4EB4EF5E2B8856FF00D08295 /* signUpView.swift */,
 				FD5C3EE82B7DC3FF007A8D5D /* Assets.xcassets */,
 				FD5C3EEA2B7DC3FF007A8D5D /* Preview Content */,
 			);
