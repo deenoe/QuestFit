@@ -4,6 +4,8 @@ import Foundation
 struct HomeView: View {
     // Define a state variable for the username
     @State private var username: String = ""
+    @State private var isSettingsViewPresented = false
+    
     let mainColor = Color(red: 0/255, green: 55/255, blue: 0/255)
     let accentColor = Color(red: 152/255, green: 158/255, blue: 143/255)
     
@@ -47,6 +49,7 @@ struct HomeView: View {
                     VStack{// Stacks Settings and locations
                         Button(action: {
                         // Implement action for settings button
+                            isSettingsViewPresented = true
                         }) {
                             Text("Settings")
                             .bold()
@@ -55,6 +58,10 @@ struct HomeView: View {
                             .foregroundStyle(mainColor)
                             .font(.title3)
                         }
+                        .sheet(isPresented: $isSettingsViewPresented) {
+                                        // Present the settings view as a sheet
+                                        SettingsView(isPresented: $isSettingsViewPresented)
+                                    }
                         Button(action: {
                             // Implement action for location button
                         }) {

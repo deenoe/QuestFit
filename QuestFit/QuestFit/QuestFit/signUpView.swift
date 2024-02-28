@@ -5,9 +5,11 @@ struct SignUpView: View {
     @State private var username: String = ""
     @State private var password: String = ""
     @State private var isSignedUp: Bool = false
+
     
     let mainColor = Color(red: 0/255, green: 55/255, blue: 0/255)
     let accentColor = Color(red: 152/255, green: 158/255, blue: 143/255)
+    
 
     var body: some View {
         ZStack{
@@ -59,6 +61,7 @@ struct SignUpView: View {
                     .background(.white)
             }
             .disabled(username.isEmpty || password.isEmpty)
+            
         }
     }
     }
@@ -74,6 +77,7 @@ struct SignUpView: View {
         // Set isSignedUp to true to trigger navigation
         isSignedUp = true
     }
+    
 }
 
 struct SignUpView_Previews: PreviewProvider {

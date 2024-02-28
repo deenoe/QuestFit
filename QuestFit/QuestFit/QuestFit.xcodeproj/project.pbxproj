@@ -13,6 +13,8 @@
 		4EB4EF632B886BC700D08295 /* WorkoutLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4EF622B886BC700D08295 /* WorkoutLogView.swift */; };
 		4EB4EF652B886BE100D08295 /* LeaderboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4EF642B886BE100D08295 /* LeaderboardView.swift */; };
 		4EB4EF672B89469900D08295 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4EF662B89469900D08295 /* HomeView.swift */; };
+		4EE13F4A2B8FBB9900BAB09B /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE13F492B8FBB9900BAB09B /* SplashView.swift */; };
+		4EE13F4C2B8FC11900BAB09B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE13F4B2B8FC11900BAB09B /* SettingsView.swift */; };
 		FD5C3EE52B7DC3FD007A8D5D /* QuestFitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5C3EE42B7DC3FD007A8D5D /* QuestFitApp.swift */; };
 		FD5C3EE72B7DC3FD007A8D5D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5C3EE62B7DC3FD007A8D5D /* ContentView.swift */; };
 		FD5C3EE92B7DC3FF007A8D5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD5C3EE82B7DC3FF007A8D5D /* Assets.xcassets */; };
@@ -26,6 +28,8 @@
 		4EB4EF622B886BC700D08295 /* WorkoutLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutLogView.swift; sourceTree = "<group>"; };
 		4EB4EF642B886BE100D08295 /* LeaderboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardView.swift; sourceTree = "<group>"; };
 		4EB4EF662B89469900D08295 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		4EE13F492B8FBB9900BAB09B /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		4EE13F4B2B8FC11900BAB09B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		FD5C3EE12B7DC3FD007A8D5D /* QuestFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuestFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD5C3EE42B7DC3FD007A8D5D /* QuestFitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestFitApp.swift; sourceTree = "<group>"; };
 		FD5C3EE62B7DC3FD007A8D5D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -65,8 +69,10 @@
 			children = (
 				FD5C3EE42B7DC3FD007A8D5D /* QuestFitApp.swift */,
 				FD5C3EE62B7DC3FD007A8D5D /* ContentView.swift */,
+				4EE13F492B8FBB9900BAB09B /* SplashView.swift */,
 				4EB4EF5E2B8856FF00D08295 /* signUpView.swift */,
 				4EB4EF662B89469900D08295 /* HomeView.swift */,
+				4EE13F4B2B8FC11900BAB09B /* SettingsView.swift */,
 				4EB4EF602B886BA300D08295 /* DailyQuestsView.swift */,
 				4EB4EF622B886BC700D08295 /* WorkoutLogView.swift */,
 				4EB4EF642B886BE100D08295 /* LeaderboardView.swift */,
@@ -160,9 +166,11 @@
 				4EB4EF5D2B852FE300D08295 /* firstLogInView.swift in Sources */,
 				4EB4EF652B886BE100D08295 /* LeaderboardView.swift in Sources */,
 				4EB4EF632B886BC700D08295 /* WorkoutLogView.swift in Sources */,
+				4EE13F4C2B8FC11900BAB09B /* SettingsView.swift in Sources */,
 				4EB4EF672B89469900D08295 /* HomeView.swift in Sources */,
 				FD5C3EE52B7DC3FD007A8D5D /* QuestFitApp.swift in Sources */,
 				4EB4EF612B886BA300D08295 /* DailyQuestsView.swift in Sources */,
+				4EE13F4A2B8FBB9900BAB09B /* SplashView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
