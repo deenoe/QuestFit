@@ -3,7 +3,7 @@ import Foundation
 
 struct HomeView: View {
     // Define a state variable for the username
-    @State private var username: String = ""
+
     let mainColor = Color(red: 0/255, green: 55/255, blue: 0/255)
     let accentColor = Color(red: 152/255, green: 158/255, blue: 143/255)
     
@@ -36,7 +36,7 @@ struct HomeView: View {
                             .overlay(Circle().stroke(Color.white, lineWidth: 2))
                             .shadow(radius: 5)
                             .offset(x:-20)
-                        Text(username)
+                        Text(UserDefaults.standard.string(forKey: "username") ?? "")
                             .offset(x:-20)
                             .bold()
                             .monospaced()
@@ -85,13 +85,6 @@ struct HomeView: View {
                         }
                 }
                 .padding()
-            }
-        }
-        .onAppear {
-            // Retrieve the username from UserDefaults
-            if let savedUsername = UserDefaults.standard.string(forKey: "username") {
-                self.username = savedUsername
-                print("Retrieved username:", savedUsername)
             }
         }
         .navigationBarBackButtonHidden(true)
