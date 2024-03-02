@@ -7,123 +7,248 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4EB4EF5D2B852FE300D08295 /* firstLogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4EF5C2B852FE300D08295 /* firstLogInView.swift */; };
-		4EB4EF5F2B8856FF00D08295 /* signUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4EF5E2B8856FF00D08295 /* signUpView.swift */; };
-		4EB4EF612B886BA300D08295 /* DailyQuestsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4EF602B886BA300D08295 /* DailyQuestsView.swift */; };
-		4EB4EF632B886BC700D08295 /* WorkoutLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4EF622B886BC700D08295 /* WorkoutLogView.swift */; };
-		4EB4EF652B886BE100D08295 /* LeaderboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4EF642B886BE100D08295 /* LeaderboardView.swift */; };
-		4EB4EF672B89469900D08295 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4EF662B89469900D08295 /* HomeView.swift */; };
-		FD5C3EE52B7DC3FD007A8D5D /* QuestFitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5C3EE42B7DC3FD007A8D5D /* QuestFitApp.swift */; };
-		FD5C3EE92B7DC3FF007A8D5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD5C3EE82B7DC3FF007A8D5D /* Assets.xcassets */; };
-		FD5C3EEC2B7DC3FF007A8D5D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD5C3EEB2B7DC3FF007A8D5D /* Preview Assets.xcassets */; };
-		FD5CAC422B90475100D65DAE /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5CAC412B90475100D65DAE /* OnboardingView.swift */; };
-		FD8EF26C2B9075CE00181458 /* LoggedInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8EF26B2B9075CE00181458 /* LoggedInView.swift */; };
+		FD9CACFD2B9330F400AD3A9C /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9CACFC2B9330F400AD3A9C /* OnboardingView.swift */; };
+		FDB75C692B932F590076BB23 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB75C682B932F590076BB23 /* HomeView.swift */; };
+		FDB75C6B2B932FE10076BB23 /* DailyQuestsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB75C6A2B932FE10076BB23 /* DailyQuestsView.swift */; };
+		FDB75C6D2B932FE70076BB23 /* LeaderboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB75C6C2B932FE70076BB23 /* LeaderboardView.swift */; };
+		FDB75C6F2B932FEB0076BB23 /* WorkoutLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB75C6E2B932FEB0076BB23 /* WorkoutLogView.swift */; };
+		FDDB39102B92AF710067961C /* QuestFitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDB390F2B92AF710067961C /* QuestFitApp.swift */; };
+		FDDB39122B92AF710067961C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDB39112B92AF710067961C /* ContentView.swift */; };
+		FDDB39142B92AF720067961C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDDB39132B92AF720067961C /* Assets.xcassets */; };
+		FDDB39172B92AF720067961C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDDB39162B92AF720067961C /* Preview Assets.xcassets */; };
+		FDDB39262B92B2F10067961C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDB39252B92B2F10067961C /* LoginView.swift */; };
+		FDDB39282B92B3050067961C /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDB39272B92B3050067961C /* RegistrationView.swift */; };
+		FDDB392A2B92B3280067961C /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDB39292B92B3280067961C /* AuthViewModel.swift */; };
+		FDDB392C2B92B33A0067961C /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDB392B2B92B33A0067961C /* ProfileView.swift */; };
+		FDDB392E2B92B3470067961C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDB392D2B92B3470067961C /* User.swift */; };
+		FDDB39302B92B3550067961C /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDB392F2B92B3550067961C /* InputView.swift */; };
+		FDDB39322B92B3620067961C /* SettingsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDB39312B92B3620067961C /* SettingsRowView.swift */; };
+		FDDB394B2B92B5950067961C /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = FDDB394A2B92B5950067961C /* FirebaseAuth */; };
+		FDDB394D2B92B59D0067961C /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = FDDB394C2B92B59D0067961C /* FirebaseFirestore */; };
+		FDDB394F2B92B5B40067961C /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FDDB394E2B92B5B40067961C /* FirebaseFirestoreSwift */; };
+		FDDB39552B92BA370067961C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FDDB39542B92BA370067961C /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4EB4EF5C2B852FE300D08295 /* firstLogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstLogInView.swift; sourceTree = "<group>"; };
-		4EB4EF5E2B8856FF00D08295 /* signUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpView.swift; sourceTree = "<group>"; };
-		4EB4EF602B886BA300D08295 /* DailyQuestsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyQuestsView.swift; sourceTree = "<group>"; };
-		4EB4EF622B886BC700D08295 /* WorkoutLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutLogView.swift; sourceTree = "<group>"; };
-		4EB4EF642B886BE100D08295 /* LeaderboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardView.swift; sourceTree = "<group>"; };
-		4EB4EF662B89469900D08295 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		FD5C3EE12B7DC3FD007A8D5D /* QuestFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuestFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD5C3EE42B7DC3FD007A8D5D /* QuestFitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestFitApp.swift; sourceTree = "<group>"; };
-		FD5C3EE82B7DC3FF007A8D5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FD5C3EEB2B7DC3FF007A8D5D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		FD5CAC412B90475100D65DAE /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
-		FD8EF26B2B9075CE00181458 /* LoggedInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInView.swift; sourceTree = "<group>"; };
+		FD9CACFC2B9330F400AD3A9C /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		FDB75C682B932F590076BB23 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		FDB75C6A2B932FE10076BB23 /* DailyQuestsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyQuestsView.swift; sourceTree = "<group>"; };
+		FDB75C6C2B932FE70076BB23 /* LeaderboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardView.swift; sourceTree = "<group>"; };
+		FDB75C6E2B932FEB0076BB23 /* WorkoutLogView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutLogView.swift; sourceTree = "<group>"; };
+		FDDB390C2B92AF710067961C /* QuestFit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuestFit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDDB390F2B92AF710067961C /* QuestFitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestFitApp.swift; sourceTree = "<group>"; };
+		FDDB39112B92AF710067961C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FDDB39132B92AF720067961C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FDDB39162B92AF720067961C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FDDB39252B92B2F10067961C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		FDDB39272B92B3050067961C /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		FDDB39292B92B3280067961C /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		FDDB392B2B92B33A0067961C /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		FDDB392D2B92B3470067961C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FDDB392F2B92B3550067961C /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
+		FDDB39312B92B3620067961C /* SettingsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRowView.swift; sourceTree = "<group>"; };
+		FDDB39542B92BA370067961C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		FD5C3EDE2B7DC3FD007A8D5D /* Frameworks */ = {
+		FDDB39092B92AF710067961C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDDB394B2B92B5950067961C /* FirebaseAuth in Frameworks */,
+				FDDB394D2B92B59D0067961C /* FirebaseFirestore in Frameworks */,
+				FDDB394F2B92B5B40067961C /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FD5C3ED82B7DC3FD007A8D5D = {
+		FDB75C662B932EF70076BB23 /* HomePage */ = {
 			isa = PBXGroup;
 			children = (
-				FD5C3EE32B7DC3FD007A8D5D /* QuestFit */,
-				FD5C3EE22B7DC3FD007A8D5D /* Products */,
+				FDB75C682B932F590076BB23 /* HomeView.swift */,
+				FDB75C672B932F2D0076BB23 /* TabViews */,
+			);
+			path = HomePage;
+			sourceTree = "<group>";
+		};
+		FDB75C672B932F2D0076BB23 /* TabViews */ = {
+			isa = PBXGroup;
+			children = (
+				FDB75C6E2B932FEB0076BB23 /* WorkoutLogView.swift */,
+				FDB75C6C2B932FE70076BB23 /* LeaderboardView.swift */,
+				FDB75C6A2B932FE10076BB23 /* DailyQuestsView.swift */,
+			);
+			path = TabViews;
+			sourceTree = "<group>";
+		};
+		FDDB39032B92AF710067961C = {
+			isa = PBXGroup;
+			children = (
+				FDDB390E2B92AF710067961C /* QuestFit */,
+				FDDB390D2B92AF710067961C /* Products */,
+				FDDB39492B92B5950067961C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		FD5C3EE22B7DC3FD007A8D5D /* Products */ = {
+		FDDB390D2B92AF710067961C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FD5C3EE12B7DC3FD007A8D5D /* QuestFit.app */,
+				FDDB390C2B92AF710067961C /* QuestFit.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FD5C3EE32B7DC3FD007A8D5D /* QuestFit */ = {
+		FDDB390E2B92AF710067961C /* QuestFit */ = {
 			isa = PBXGroup;
 			children = (
-				FD5C3EE42B7DC3FD007A8D5D /* QuestFitApp.swift */,
-				FD5CAC412B90475100D65DAE /* OnboardingView.swift */,
-				4EB4EF5E2B8856FF00D08295 /* signUpView.swift */,
-				4EB4EF662B89469900D08295 /* HomeView.swift */,
-				4EB4EF602B886BA300D08295 /* DailyQuestsView.swift */,
-				4EB4EF622B886BC700D08295 /* WorkoutLogView.swift */,
-				4EB4EF642B886BE100D08295 /* LeaderboardView.swift */,
-				4EB4EF5C2B852FE300D08295 /* firstLogInView.swift */,
-				FD5C3EE82B7DC3FF007A8D5D /* Assets.xcassets */,
-				FD5C3EEA2B7DC3FF007A8D5D /* Preview Content */,
-				FD8EF26B2B9075CE00181458 /* LoggedInView.swift */,
+				FDDB391D2B92B2160067961C /* App */,
+				FDDB393E2B92B4CF0067961C /* LoginFlow */,
+				FDB75C662B932EF70076BB23 /* HomePage */,
+				FDDB39132B92AF720067961C /* Assets.xcassets */,
+				FDDB39152B92AF720067961C /* Preview Content */,
 			);
 			path = QuestFit;
 			sourceTree = "<group>";
 		};
-		FD5C3EEA2B7DC3FF007A8D5D /* Preview Content */ = {
+		FDDB39152B92AF720067961C /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				FD5C3EEB2B7DC3FF007A8D5D /* Preview Assets.xcassets */,
+				FDDB39542B92BA370067961C /* GoogleService-Info.plist */,
+				FDDB39162B92AF720067961C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FDDB391D2B92B2160067961C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				FDDB390F2B92AF710067961C /* QuestFitApp.swift */,
+				FDDB39232B92B2A20067961C /* Origin */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		FDDB391E2B92B22E0067961C /* ReusableViews */ = {
+			isa = PBXGroup;
+			children = (
+				FDDB392F2B92B3550067961C /* InputView.swift */,
+				FDDB39312B92B3620067961C /* SettingsRowView.swift */,
+			);
+			path = ReusableViews;
+			sourceTree = "<group>";
+		};
+		FDDB391F2B92B2480067961C /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				FDDB39202B92B2770067961C /* View */,
+				FDDB39212B92B27D0067961C /* ViewModel */,
+				FDDB391E2B92B22E0067961C /* ReusableViews */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		FDDB39202B92B2770067961C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FDDB39252B92B2F10067961C /* LoginView.swift */,
+				FDDB39272B92B3050067961C /* RegistrationView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FDDB39212B92B27D0067961C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FDDB39292B92B3280067961C /* AuthViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FDDB39222B92B2940067961C /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				FDDB392B2B92B33A0067961C /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		FDDB39232B92B2A20067961C /* Origin */ = {
+			isa = PBXGroup;
+			children = (
+				FDDB39112B92AF710067961C /* ContentView.swift */,
+				FD9CACFC2B9330F400AD3A9C /* OnboardingView.swift */,
+			);
+			path = Origin;
+			sourceTree = "<group>";
+		};
+		FDDB39242B92B2B30067961C /* UserModel */ = {
+			isa = PBXGroup;
+			children = (
+				FDDB392D2B92B3470067961C /* User.swift */,
+			);
+			path = UserModel;
+			sourceTree = "<group>";
+		};
+		FDDB393E2B92B4CF0067961C /* LoginFlow */ = {
+			isa = PBXGroup;
+			children = (
+				FDDB391F2B92B2480067961C /* Authentication */,
+				FDDB39222B92B2940067961C /* Profile */,
+				FDDB39242B92B2B30067961C /* UserModel */,
+			);
+			path = LoginFlow;
+			sourceTree = "<group>";
+		};
+		FDDB39492B92B5950067961C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FD5C3EE02B7DC3FD007A8D5D /* QuestFit */ = {
+		FDDB390B2B92AF710067961C /* QuestFit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FD5C3EEF2B7DC3FF007A8D5D /* Build configuration list for PBXNativeTarget "QuestFit" */;
+			buildConfigurationList = FDDB391A2B92AF720067961C /* Build configuration list for PBXNativeTarget "QuestFit" */;
 			buildPhases = (
-				FD5C3EDD2B7DC3FD007A8D5D /* Sources */,
-				FD5C3EDE2B7DC3FD007A8D5D /* Frameworks */,
-				FD5C3EDF2B7DC3FD007A8D5D /* Resources */,
+				FDDB39082B92AF710067961C /* Sources */,
+				FDDB39092B92AF710067961C /* Frameworks */,
+				FDDB390A2B92AF710067961C /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = QuestFit;
+			packageProductDependencies = (
+				FDDB394A2B92B5950067961C /* FirebaseAuth */,
+				FDDB394C2B92B59D0067961C /* FirebaseFirestore */,
+				FDDB394E2B92B5B40067961C /* FirebaseFirestoreSwift */,
+			);
 			productName = QuestFit;
-			productReference = FD5C3EE12B7DC3FD007A8D5D /* QuestFit.app */;
+			productReference = FDDB390C2B92AF710067961C /* QuestFit.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		FD5C3ED92B7DC3FD007A8D5D /* Project object */ = {
+		FDDB39042B92AF710067961C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1520;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
-					FD5C3EE02B7DC3FD007A8D5D = {
+					FDDB390B2B92AF710067961C = {
 						CreatedOnToolsVersion = 15.2;
 					};
 				};
 			};
-			buildConfigurationList = FD5C3EDC2B7DC3FD007A8D5D /* Build configuration list for PBXProject "QuestFit" */;
+			buildConfigurationList = FDDB39072B92AF710067961C /* Build configuration list for PBXProject "QuestFit" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -131,49 +256,58 @@
 				en,
 				Base,
 			);
-			mainGroup = FD5C3ED82B7DC3FD007A8D5D;
-			productRefGroup = FD5C3EE22B7DC3FD007A8D5D /* Products */;
+			mainGroup = FDDB39032B92AF710067961C;
+			packageReferences = (
+				FDDB39332B92B47E0067961C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			productRefGroup = FDDB390D2B92AF710067961C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FD5C3EE02B7DC3FD007A8D5D /* QuestFit */,
+				FDDB390B2B92AF710067961C /* QuestFit */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		FD5C3EDF2B7DC3FD007A8D5D /* Resources */ = {
+		FDDB390A2B92AF710067961C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD5C3EEC2B7DC3FF007A8D5D /* Preview Assets.xcassets in Resources */,
-				FD5C3EE92B7DC3FF007A8D5D /* Assets.xcassets in Resources */,
+				FDDB39172B92AF720067961C /* Preview Assets.xcassets in Resources */,
+				FDDB39142B92AF720067961C /* Assets.xcassets in Resources */,
+				FDDB39552B92BA370067961C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		FD5C3EDD2B7DC3FD007A8D5D /* Sources */ = {
+		FDDB39082B92AF710067961C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EB4EF5F2B8856FF00D08295 /* signUpView.swift in Sources */,
-				4EB4EF5D2B852FE300D08295 /* firstLogInView.swift in Sources */,
-				FD5CAC422B90475100D65DAE /* OnboardingView.swift in Sources */,
-				4EB4EF652B886BE100D08295 /* LeaderboardView.swift in Sources */,
-				4EB4EF632B886BC700D08295 /* WorkoutLogView.swift in Sources */,
-				4EB4EF672B89469900D08295 /* HomeView.swift in Sources */,
-				FD5C3EE52B7DC3FD007A8D5D /* QuestFitApp.swift in Sources */,
-				FD8EF26C2B9075CE00181458 /* LoggedInView.swift in Sources */,
-				4EB4EF612B886BA300D08295 /* DailyQuestsView.swift in Sources */,
+				FDDB392A2B92B3280067961C /* AuthViewModel.swift in Sources */,
+				FDDB39262B92B2F10067961C /* LoginView.swift in Sources */,
+				FDDB39122B92AF710067961C /* ContentView.swift in Sources */,
+				FDB75C6F2B932FEB0076BB23 /* WorkoutLogView.swift in Sources */,
+				FDB75C692B932F590076BB23 /* HomeView.swift in Sources */,
+				FDB75C6D2B932FE70076BB23 /* LeaderboardView.swift in Sources */,
+				FDDB39102B92AF710067961C /* QuestFitApp.swift in Sources */,
+				FDDB392C2B92B33A0067961C /* ProfileView.swift in Sources */,
+				FDDB39302B92B3550067961C /* InputView.swift in Sources */,
+				FDDB39282B92B3050067961C /* RegistrationView.swift in Sources */,
+				FDDB392E2B92B3470067961C /* User.swift in Sources */,
+				FDDB39322B92B3620067961C /* SettingsRowView.swift in Sources */,
+				FDB75C6B2B932FE10076BB23 /* DailyQuestsView.swift in Sources */,
+				FD9CACFD2B9330F400AD3A9C /* OnboardingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		FD5C3EED2B7DC3FF007A8D5D /* Debug */ = {
+		FDDB39182B92AF720067961C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -236,7 +370,7 @@
 			};
 			name = Debug;
 		};
-		FD5C3EEE2B7DC3FF007A8D5D /* Release */ = {
+		FDDB39192B92AF720067961C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -292,7 +426,7 @@
 			};
 			name = Release;
 		};
-		FD5C3EF02B7DC3FF007A8D5D /* Debug */ = {
+		FDDB391B2B92AF720067961C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -313,7 +447,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.miguel.QuestFit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.miggyb.QuestFit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -321,7 +455,7 @@
 			};
 			name = Debug;
 		};
-		FD5C3EF12B7DC3FF007A8D5D /* Release */ = {
+		FDDB391C2B92AF720067961C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -342,7 +476,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.miguel.QuestFit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.miggyb.QuestFit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -353,25 +487,54 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FD5C3EDC2B7DC3FD007A8D5D /* Build configuration list for PBXProject "QuestFit" */ = {
+		FDDB39072B92AF710067961C /* Build configuration list for PBXProject "QuestFit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FD5C3EED2B7DC3FF007A8D5D /* Debug */,
-				FD5C3EEE2B7DC3FF007A8D5D /* Release */,
+				FDDB39182B92AF720067961C /* Debug */,
+				FDDB39192B92AF720067961C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FD5C3EEF2B7DC3FF007A8D5D /* Build configuration list for PBXNativeTarget "QuestFit" */ = {
+		FDDB391A2B92AF720067961C /* Build configuration list for PBXNativeTarget "QuestFit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FD5C3EF02B7DC3FF007A8D5D /* Debug */,
-				FD5C3EF12B7DC3FF007A8D5D /* Release */,
+				FDDB391B2B92AF720067961C /* Debug */,
+				FDDB391C2B92AF720067961C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FDDB39332B92B47E0067961C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.21.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FDDB394A2B92B5950067961C /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FDDB39332B92B47E0067961C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		FDDB394C2B92B59D0067961C /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FDDB39332B92B47E0067961C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		FDDB394E2B92B5B40067961C /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FDDB39332B92B47E0067961C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = FD5C3ED92B7DC3FD007A8D5D /* Project object */;
+	rootObject = FDDB39042B92AF710067961C /* Project object */;
 }
