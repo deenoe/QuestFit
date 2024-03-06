@@ -12,67 +12,89 @@ struct LoginView: View {
     @State private var password = ""
     @EnvironmentObject var viewModel: AuthViewModel
     
+    let mainColor = Color(red: 0/255, green: 55/255, blue: 0/255)
+    let accentColor = Color(red: 152/255, green: 158/255, blue: 143/255)
+    
     var body: some View {
         NavigationStack {
-            VStack{
-            //image
-            Image("frodge3")
-                .resizable()
-                .scaledToFill()
-                .frame(width:110, height: 130)
-                .padding(.vertical, 32)
-                    
-            // form fields
-                VStack (spacing:24) {
-                    InputView(text: $email,
-                              title: "Email Address",
-                              placeholder: "frog@email.com")
-                        .autocapitalization(.none)
-                    InputView(text: $password,
-                              title: "Password",
-                              placeholder: "Enter your password",
-                              isSecureField: true)
-                        .autocapitalization(.none)
-                }
-                .padding(.horizontal)
-                .padding(.top, 12)
-            // sign in button
-                Button {
-                    Task{
-                        try await viewModel.signIn(withEmail: email, password: password)
-                    }
-                } label: {
-                    HStack{
-                        Text("SIGN IN")
-                            .fontWeight(.semibold)
-                        Image(systemName: "arrow.right")
-                    }
-                    .foregroundColor(.white)
-                    .frame(width: UIScreen.main.bounds.width - 32, height: 48)
-                }
-                .background(Color(.systemBlue))
-                .disabled(!formIsValid)
-                .opacity(formIsValid ? 1.0 :0.5)
-                .cornerRadius(10)
-                .padding(.top, 24)
-                Spacer()
-                }
+            ZStack {
+                RadialGradient(gradient: Gradient(colors: [accentColor, .white]), center: .center, startRadius: 0, endRadius: 3000) // Adjust the endRadius as needed
+                    .ignoresSafeArea()
                 
-            // sign up button
-            NavigationLink{
-                RegistrationView()
-                    .navigationBarBackButtonHidden(true)
-            } label: {
-                HStack (spacing: 3){
-                    Text("Don't have an account?")
-                    Text("Sign Up")
-                        .fontWeight(.bold)
+                VStack{
+                    // Show the frog!!
+                    Image("frodge3")
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width:200, height: 150)
+                        .padding(.vertical, 32)
+                    VStack{
+                        
+                        // form fields
+                        VStack (spacing:24) {
+                            InputView(text: $email,
+                                      title: "Email Address",
+                                      placeholder: "frog@email.com")
+                            .autocapitalization(.none)
+                            InputView(text: $password,
+                                      title: "Password",
+                                      placeholder: "Enter your password",
+                                      isSecureField: true)
+                            .autocapitalization(.none)
+                        }
+                        .foregroundColor(mainColor)
+                        .monospaced()
+                        
+                        
+                        // sign in button
+                        Button {
+                            Task{
+                                try await viewModel.signIn(withEmail: email, password: password)
+                            }
+                        } label: {
+                            HStack{
+                                Text("SIGN IN")
+                                    .fontWeight(.bold)
+                                Image(systemName: "arrow.right")
+                                
+                            }
+                            .monospaced()
+                            .frame(width: UIScreen.main.bounds.width - 32, height: 48)
+                            .foregroundColor(.white)
+                        }
+                        .background(mainColor)
+                        .disabled(!formIsValid)
+                        .cornerRadius(10)
+                        .opacity(formIsValid ? 1: 0.7)
+                        .padding(.top, 24)
+                        
+                    }
+                    .padding()
+                    .padding(.horizontal)
+                    
+                    Spacer()
+                    // sign up button
+                    NavigationLink{
+                        RegistrationView()
+                            .navigationBarBackButtonHidden(true)
+                    } label: {
+                        HStack (spacing: 6){
+                            Text("Don't have an account?")
+                            Text("Sign Up!")
+                                .fontWeight(.bold)
+                        }
+                        .foregroundStyle(mainColor)
+                        .monospaced()
+                        .opacity(0.8)
+                        .cornerRadius(1)
+                        .font(.system(size:14))
+                    }
+                    .padding(.bottom, 16)
                 }
-                .font(.system(size:14))
-            }
             }
         }
     }
+}
 
 extension LoginView: AuthenticationFormProtocol{
     var formIsValid: Bool{

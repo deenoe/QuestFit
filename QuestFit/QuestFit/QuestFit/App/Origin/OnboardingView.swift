@@ -9,17 +9,21 @@ import SwiftUI
 
 // (red: 0/255, green: 100/255, blue: 60/255)
 
-struct OnboardingView: View {
+struct OnboardingView: View{
+    
     let mainColor = Color(red: 0/255, green: 55/255, blue: 0/255)
     let accentColor = Color(red: 152/255, green: 158/255, blue: 143/255)
     
+    init(){
+        UserDefaults.standard.set(false, forKey: "firstTime")
+    }
     
     var body: some View {
         ZStack{
             RadialGradient(gradient: Gradient(colors: [mainColor, .white]), center: .center, startRadius: 0, endRadius: 2500) // Adjust the endRadius as needed
-                    .ignoresSafeArea()
+                .ignoresSafeArea()
             VStack{
-        
+                
                 Image("frodge3")
                     .resizable()
                     .frame(width: 250, height: 250)
@@ -34,34 +38,38 @@ struct OnboardingView: View {
                     .padding()
                 Text("Ready to start your journey?")
                     .padding()
-                    // .frame(width:300)
+                // .frame(width:300)
                     .foregroundStyle(accentColor)
                     .monospaced()
                     .italic()
                     .bold()
                     .font(.callout)
                     .multilineTextAlignment(.center)
-                NavigationLink(destination: LoginView()) {
+                NavigationLink{
+                    LoginView()
+                        .navigationBarBackButtonHidden(true)
+                }label: {
                     Text("Start")
-                        .monospaced()
                         .font(.body)
+                        .fontWeight(.bold)
+                        .monospaced()
                         .padding()
-                        .bold()
-                        .border(accentColor)
                         .foregroundColor(mainColor)
-                        .background(accentColor)}
-                        .padding()
-                
+                        .background(accentColor)
+                        .cornerRadius(8)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 8)
+                                .stroke(accentColor, lineWidth: 1)
+                        )
+                }
+                .padding()
             }
-            
-                
         }
     }}
 
 struct OnboardingView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView{
-            //HomeView()
             OnboardingView()
         }
     }

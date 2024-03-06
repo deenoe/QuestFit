@@ -16,81 +16,93 @@ struct RegistrationView: View {
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject var viewModel: AuthViewModel
     
+    let mainColor = Color(red: 0/255, green: 55/255, blue: 0/255)
+    let accentColor = Color(red: 152/255, green: 158/255, blue: 143/255)
+    
     var body: some View {
-        VStack{
-            Image("frodge3")
-                .resizable()
-                .scaledToFill()
-                .frame(width:110, height: 130)
-                .padding(.vertical, 32)
-            VStack (spacing:24) {
-                InputView(text: $email,
-                          title: "Email Address",
-                          placeholder: "frog@email.com")
+        ZStack{
+            RadialGradient(gradient: Gradient(colors: [accentColor, .white]), center: .center, startRadius: 0, endRadius: 3000) // Adjust the endRadius as needed
+                .ignoresSafeArea()
+            VStack{
+                Image("frodge3")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width:200, height: 150)
+                    .padding(.vertical, 32)
+                VStack (spacing:24) {
+                    InputView(text: $email,
+                              title: "Email Address",
+                              placeholder: "frog@email.com")
                     .autocapitalization(.none)
-                
-                InputView(text: $fullname,
-                          title: "Full Name",
-                          placeholder: "Enter Your name")
-                
-                InputView(text: $password,
-                          title: "Password",
-                          placeholder: "Enter your password",
-                          isSecureField: true)
-                
-                ZStack(alignment: .trailing){
-                    InputView(text: $confirmPassword,
-                              title: "Confirm Password",
-                              placeholder: "Confirm your password",
+                    
+                    InputView(text: $fullname,
+                              title: "Full Name",
+                              placeholder: "Enter Your name")
+                    
+                    InputView(text: $password,
+                              title: "Password",
+                              placeholder: "Enter your password",
                               isSecureField: true)
                     
-                    if !password.isEmpty && !confirmPassword.isEmpty{
-                        if password == confirmPassword{
-                            Image(systemName: "checkmark.circle.fill")
-                                .imageScale(.large)
-                                .fontWeight(.bold)
-                                .foregroundColor(Color(.systemGreen))
-                        } else{
-                            Image(systemName: "xmark.circle.fill")
-                                .imageScale(.large)
-                                .fontWeight(.bold)
-                                .foregroundColor(Color(.systemRed))
+                    ZStack(alignment: .trailing){
+                        InputView(text: $confirmPassword,
+                                  title: "Confirm Password",
+                                  placeholder: "Confirm your password",
+                                  isSecureField: true)
+                        
+                        if !password.isEmpty && !confirmPassword.isEmpty{
+                            if password == confirmPassword{
+                                Image(systemName: "checkmark.circle.fill")
+                                    .imageScale(.large)
+                                    .fontWeight(.bold)
+                                    .foregroundColor(Color(.systemGreen))
+                            } else{
+                                Image(systemName: "xmark.circle.fill")
+                                    .imageScale(.large)
+                                    .fontWeight(.bold)
+                                    .foregroundColor(Color(.systemRed))
+                            }
                         }
                     }
                 }
+                .padding(.top, 12)
+
+                Button {
+                    Task {
+                        try await viewModel.createUser(withEmail:email,
+                                                       password:password,
+                                                       fullname: fullname)
+                    }
+                } label: {
+                    HStack{
+                        Text("SIGN UP")
+                            .fontWeight(.semibold)
+                        Image(systemName: "arrow.right")
+                    }
+                    .foregroundColor(.white)
+                    .frame(width: UIScreen.main.bounds.width - 32, height: 48)
+                }
+                .background(mainColor)
+                .disabled(!formIsValid)
+                .opacity(formIsValid ? 1 :0.7)
+                .cornerRadius(10)
+                .padding(.top, 24)
+                
+                Spacer()
+                Button{
+                    dismiss()
+                } label: {
+                    Text("Already have an account?")
+                    Text("Sign in")
+                        .fontWeight(.bold)
+                }
+                .opacity(0.8)
+                .font(.system(size:14))
+                .padding(.bottom, 16)
             }
             .padding(.horizontal)
-            .padding(.top, 12)
-            
-            Button {
-                Task {
-                    try await viewModel.createUser(withEmail:email,
-                                                   password:password,
-                                                   fullname: fullname)
-                }
-            } label: {
-                HStack{
-                    Text("SIGN UP")
-                        .fontWeight(.semibold)
-                    Image(systemName: "arrow.right")
-                }
-                .foregroundColor(.white)
-                .frame(width: UIScreen.main.bounds.width - 32, height: 48)
-            }
-            .background(Color(.systemBlue))
-            .disabled(!formIsValid)
-            .opacity(formIsValid ? 1.0 :0.5)
-            .cornerRadius(10)
-            .padding(.top, 24)
-            
-            Spacer()
-            Button{
-                dismiss()
-            } label: {
-                Text("Already have an account?")
-                Text("Sign in")
-                    .fontWeight(.bold)
-            }
+            .monospaced()
+            .foregroundStyle(mainColor)
         }
     }
 }
