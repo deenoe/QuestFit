@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RegistrationView: View {
     @State private var email = ""
-    @State private var fullname = ""
+    @State private var username = ""
     @State private var password = ""
     @State private var confirmPassword = ""
     
@@ -35,9 +35,9 @@ struct RegistrationView: View {
                               placeholder: "frog@email.com")
                     .autocapitalization(.none)
                     
-                    InputView(text: $fullname,
-                              title: "Full Name",
-                              placeholder: "Enter Your name")
+                    InputView(text: $username,
+                              title: "Display Name",
+                              placeholder: "Enter Your Display Name")
                     
                     InputView(text: $password,
                               title: "Password",
@@ -70,8 +70,8 @@ struct RegistrationView: View {
                 Button {
                     Task {
                         try await viewModel.createUser(withEmail:email,
-                                                       password:password,
-                                                       fullname: fullname)
+                                                       password: password,
+                                                       username: username)
                     }
                 } label: {
                     HStack{
@@ -113,7 +113,7 @@ extension RegistrationView: AuthenticationFormProtocol{
         && email.contains("@")
         && !password.isEmpty
         && password.count>5
-        && !fullname.isEmpty
+        && !username.isEmpty
         && confirmPassword == password
     }
 }

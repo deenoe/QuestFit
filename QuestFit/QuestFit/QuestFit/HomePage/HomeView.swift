@@ -10,61 +10,58 @@ struct HomeView: View {
         if let user = viewModel.currentUser{
             ZStack {
                 Color(accentColor)
-                .ignoresSafeArea()
+                    .ignoresSafeArea()
                 VStack {
                     // Top section
-                    HStack {
-                        ZStack(alignment: .center) { // Align everything to the center of the ZStack
+                    HStack{
+                        Spacer()
+                        ZStack (alignment: .center){ // Align everything to the center of the ZStack
                             Image(systemName: "shield.fill")
                                 .resizable()
-                                .frame(width: 70, height: 70)
+                                .frame(width: 40, height: 40)
                                 .foregroundColor(mainColor)
-                            Text("1")
-                                .font(.largeTitle)
+                            Text("\(user.level)")
+                                .font(.system(size:16))
                                 .monospaced()
+                                .bold()
                                 .foregroundColor(accentColor)
                                 .multilineTextAlignment(.center) // Center the text within its bounding box
                         }
-
+                        .padding(.horizontal)
                         Spacer()
-                        VStack{
+                        VStack {
                             Image("frodge3")
                                 .resizable()
                                 .aspectRatio(contentMode: .fill)
-                                .frame(width: 100, height: 100)
+                                .frame(width: 128, height: 128)
                                 .clipShape(Circle())
-                                .overlay(Circle().stroke(Color.white, lineWidth: 2))
-                                .shadow(radius: 5)
-                                .offset(x:-20)
-                            Text(user.fullname)
-                                .offset(x:-20)
-                                .bold()
+                                .overlay(Circle().stroke(Color(mainColor), lineWidth: 6))
+                                .shadow(radius: 20)
+                                .offset(x:-5)
+                            Text(user.username)
                                 .monospaced()
-                                .font(.caption)
+                                .bold()
+                                .font(.system(size:20))
                                 .foregroundStyle(mainColor)
+                                .offset(x:-5)
                         }
-                        Spacer() // Spacer pushes the following views to the right
-                        VStack{// Stacks Settings and locations
+                        .padding(.horizontal)
+                        
+                        VStack{ // Stacks Settings and locations
                             Button(action: {
-                            // Implement action for settings button
+                                viewModel.signOut()
+                                // Implement action for settings button
                             }) {
-                                Text("Settings")
-                                .bold()
-                                .monospaced()
-                                .font(.caption)
-                                .foregroundStyle(mainColor)
-                                .font(.title3)
-                            }
-                            Button(action: {
-                                // Implement action for location button
-                            }) {
-                                Text("Location")
-                                .bold()
-                                .monospaced()
-                                .font(.callout)
-                                .foregroundStyle(mainColor)
+                                Image(systemName: "gear")
+                                    .resizable()
+                                    .frame(width: 40, height: 40)
+                                    .monospaced()
+                                    .foregroundStyle(mainColor)
+                                    .offset(x:-6)
                             }
                         }
+                        .padding(.horizontal)
+                        Spacer()
                     }
                     .padding()
                     
@@ -80,14 +77,17 @@ struct HomeView: View {
                                 Label("Work Out Log", systemImage: "bolt.fill")
                             }
                         LeaderboardView()
+                            .environmentObject(viewModel)
                             .tabItem{
                                 Label("Leaderboards", systemImage: "trophy")
                             }
+                        
                     }
                     .padding()
+                    .accentColor(mainColor)
+                    Spacer()
                 }
             }
-            .navigationBarBackButtonHidden(true)
         }
     }
 }

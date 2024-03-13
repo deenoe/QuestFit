@@ -33,11 +33,11 @@ class AuthViewModel: ObservableObject {
         }
     }
     
-    func createUser(withEmail email: String, password: String, fullname: String) async throws {
+    func createUser(withEmail email: String, password: String, username: String) async throws {
         do {
             let result = try await Auth.auth().createUser(withEmail: email, password: password)
             self.userSession = result.user
-            let user = User(id: result.user.uid, fullname: fullname, email: email)
+            let user = User(id: result.user.uid, username: username, email: email, level: 0)
             self.currentUser = user
             let encodedUser = try Firestore.Encoder().encode(self.currentUser)
             try await Firestore.firestore().collection("users").document(user.id).setData(encodedUser)
@@ -57,16 +57,40 @@ class AuthViewModel: ObservableObject {
         }
     }
     
-    func deleteAccount() {
-        
-    }
-    
     func fetchUser() async {
         guard let uid = Auth.auth().currentUser?.uid else {return}
         
         guard let snapshot = try? await Firestore.firestore().collection("users").document(uid).getDocument() else {return}
         self.currentUser = try? snapshot.data(as: User.self)
         
-        print("DEBUG: Current User is \(self.currentUser)")
+        print("DEBUG: Current User is \(String(describing: self.currentUser))")
+    }
+    
+    func fetchLeaderboard() async throws -> [LeaderboardEntry] {
+        var leaderboardEntries: [LeaderboardEntry] = []
+
+        do {
+            let snapshot = try await Firestore.firestore()
+                .collection("users")
+                .order(by: "level", descending: true)
+                .limit(to: 50)
+                .getDocuments()
+
+            for document in snapshot.documents {
+                guard let username = document["username"] as? String,
+                      let level = document["level"] as? Int else {
+                    continue // Skip this entry if data is not valid
+                }
+
+                let leaderboardEntry = LeaderboardEntry(username: username, level: level)
+                leaderboardEntries.append(leaderboardEntry)
+            }
+
+        } catch {
+            throw error
+        }
+
+        return leaderboardEntries
     }
 }
+

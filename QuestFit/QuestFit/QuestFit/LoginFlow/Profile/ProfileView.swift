@@ -26,7 +26,7 @@ struct ProfileView: View {
                             .background(Color(.systemGray3))
                         .clipShape(Circle())
                         VStack(alignment: .leading, spacing: 4) {
-                            Text(user.fullname)
+                            Text(user.username)
                                 .monospaced()
                                 .fontWeight(.semibold)
                                 .padding(.top, 4)

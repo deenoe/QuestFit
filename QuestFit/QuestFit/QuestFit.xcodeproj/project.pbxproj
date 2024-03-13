@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD53DB0D2BA178E6008CA504 /* LeadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD53DB0C2BA178E6008CA504 /* LeadViewModel.swift */; };
 		FD9CACFD2B9330F400AD3A9C /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9CACFC2B9330F400AD3A9C /* OnboardingView.swift */; };
 		FDB75C692B932F590076BB23 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB75C682B932F590076BB23 /* HomeView.swift */; };
 		FDB75C6B2B932FE10076BB23 /* DailyQuestsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB75C6A2B932FE10076BB23 /* DailyQuestsView.swift */; };
@@ -27,9 +28,11 @@
 		FDDB394D2B92B59D0067961C /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = FDDB394C2B92B59D0067961C /* FirebaseFirestore */; };
 		FDDB394F2B92B5B40067961C /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FDDB394E2B92B5B40067961C /* FirebaseFirestoreSwift */; };
 		FDDB39552B92BA370067961C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FDDB39542B92BA370067961C /* GoogleService-Info.plist */; };
+		FDE3EA932B9C3F3900A8D9EE /* Leaderboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE3EA922B9C3F3900A8D9EE /* Leaderboard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FD53DB0C2BA178E6008CA504 /* LeadViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeadViewModel.swift; sourceTree = "<group>"; };
 		FD9CACFC2B9330F400AD3A9C /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		FDB75C682B932F590076BB23 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		FDB75C6A2B932FE10076BB23 /* DailyQuestsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyQuestsView.swift; sourceTree = "<group>"; };
@@ -48,6 +51,7 @@
 		FDDB392F2B92B3550067961C /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 		FDDB39312B92B3620067961C /* SettingsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRowView.swift; sourceTree = "<group>"; };
 		FDDB39542B92BA370067961C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FDE3EA922B9C3F3900A8D9EE /* Leaderboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leaderboard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,7 @@
 		FDB75C662B932EF70076BB23 /* HomePage */ = {
 			isa = PBXGroup;
 			children = (
+				FDE3EA8D2B9C3BAA00A8D9EE /* LeaderboardViewModel */,
 				FDB75C682B932F590076BB23 /* HomeView.swift */,
 				FDB75C672B932F2D0076BB23 /* TabViews */,
 			);
@@ -208,6 +213,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FDE3EA8D2B9C3BAA00A8D9EE /* LeaderboardViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FD53DB0C2BA178E6008CA504 /* LeadViewModel.swift */,
+				FDE3EA922B9C3F3900A8D9EE /* Leaderboard.swift */,
+			);
+			path = LeaderboardViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -287,10 +301,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD53DB0D2BA178E6008CA504 /* LeadViewModel.swift in Sources */,
 				FDDB392A2B92B3280067961C /* AuthViewModel.swift in Sources */,
 				FDDB39262B92B2F10067961C /* LoginView.swift in Sources */,
 				FDDB39122B92AF710067961C /* ContentView.swift in Sources */,
 				FDB75C6F2B932FEB0076BB23 /* WorkoutLogView.swift in Sources */,
+				FDE3EA932B9C3F3900A8D9EE /* Leaderboard.swift in Sources */,
 				FDB75C692B932F590076BB23 /* HomeView.swift in Sources */,
 				FDB75C6D2B932FE70076BB23 /* LeaderboardView.swift in Sources */,
 				FDDB39102B92AF710067961C /* QuestFitApp.swift in Sources */,

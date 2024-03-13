@@ -1,4 +1,6 @@
 import SwiftUI
+import Foundation
+import FirebaseAuth
 
 struct ContentView: View {
     @EnvironmentObject var viewModel: AuthViewModel
@@ -18,12 +20,14 @@ struct ContentView: View {
     }
     var body: some View {
         Group {
-            if check {
-                OnboardingView()
-            } else if viewModel.userSession != nil {
+            if Auth.auth().currentUser != nil  {
                 HomeView()
+                    .environmentObject(viewModel)
+            } else if check{
+                OnboardingView()
             } else {
                 LoginView()
+                    .environmentObject(viewModel)
             }
         }
     }

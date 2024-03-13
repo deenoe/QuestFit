@@ -1,5 +1,5 @@
 import SwiftUI
-import Firebase
+import FirebaseCore
 
 
 class AppDelegate: NSObject, UIApplicationDelegate {
@@ -12,15 +12,18 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 }
 
 @main
-struct YourApp: App {
+struct QuestFitApp: App {
     // register app delegate for Firebase setup
+    
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
+    
     var body: some Scene {
+        let viewModel = AuthViewModel()
         WindowGroup {
             NavigationView {
                 ContentView()
-                    .environmentObject(AuthViewModel())
+                    .environmentObject(viewModel)
             }
         }
     }
