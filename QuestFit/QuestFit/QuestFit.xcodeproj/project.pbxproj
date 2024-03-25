@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E84B85C2BACDD9F000B4A5B /* AddLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E84B85B2BACDD9F000B4A5B /* AddLog.swift */; };
+		4E84B85E2BACE357000B4A5B /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E84B85D2BACE357000B4A5B /* Workout.swift */; };
 		4EB4EF5D2B852FE300D08295 /* firstLogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4EF5C2B852FE300D08295 /* firstLogInView.swift */; };
 		4EB4EF5F2B8856FF00D08295 /* signUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4EF5E2B8856FF00D08295 /* signUpView.swift */; };
 		4EB4EF612B886BA300D08295 /* DailyQuestsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB4EF602B886BA300D08295 /* DailyQuestsView.swift */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E84B85B2BACDD9F000B4A5B /* AddLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLog.swift; sourceTree = "<group>"; };
+		4E84B85D2BACE357000B4A5B /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		4EB4EF5C2B852FE300D08295 /* firstLogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstLogInView.swift; sourceTree = "<group>"; };
 		4EB4EF5E2B8856FF00D08295 /* signUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpView.swift; sourceTree = "<group>"; };
 		4EB4EF602B886BA300D08295 /* DailyQuestsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyQuestsView.swift; sourceTree = "<group>"; };
@@ -71,6 +75,8 @@
 				4EB4EF662B89469900D08295 /* HomeView.swift */,
 				4EB4EF602B886BA300D08295 /* DailyQuestsView.swift */,
 				4EB4EF622B886BC700D08295 /* WorkoutLogView.swift */,
+				4E84B85B2BACDD9F000B4A5B /* AddLog.swift */,
+				4E84B85D2BACE357000B4A5B /* Workout.swift */,
 				4EB4EF642B886BE100D08295 /* LeaderboardView.swift */,
 				4EB4EF5C2B852FE300D08295 /* firstLogInView.swift */,
 				FD5C3EE82B7DC3FF007A8D5D /* Assets.xcassets */,
@@ -158,11 +164,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E84B85C2BACDD9F000B4A5B /* AddLog.swift in Sources */,
 				4EB4EF5F2B8856FF00D08295 /* signUpView.swift in Sources */,
 				4EB4EF5D2B852FE300D08295 /* firstLogInView.swift in Sources */,
 				FD5CAC422B90475100D65DAE /* OnboardingView.swift in Sources */,
 				4EB4EF652B886BE100D08295 /* LeaderboardView.swift in Sources */,
 				4EB4EF632B886BC700D08295 /* WorkoutLogView.swift in Sources */,
+				4E84B85E2BACE357000B4A5B /* Workout.swift in Sources */,
 				4EB4EF672B89469900D08295 /* HomeView.swift in Sources */,
 				FD5C3EE52B7DC3FD007A8D5D /* QuestFitApp.swift in Sources */,
 				FD8EF26C2B9075CE00181458 /* LoggedInView.swift in Sources */,
