@@ -33,6 +33,11 @@
 		FD6E1D992BE738B30027245F /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = FD6E1D982BE738B30027245F /* FirebaseFirestore */; };
 		FD6E1D9B2BE738B30027245F /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FD6E1D9A2BE738B30027245F /* FirebaseFirestoreSwift */; };
 		FD6E1D9D2BE739810027245F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD6E1D9C2BE739810027245F /* GoogleService-Info.plist */; };
+		FD6E1DB92BE759110027245F /* DailyQuestViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6E1DB82BE759110027245F /* DailyQuestViewViewModel.swift */; };
+		FD6E1DBB2BE7591B0027245F /* LeaderboardViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6E1DBA2BE7591B0027245F /* LeaderboardViewViewModel.swift */; };
+		FD6E1DBD2BE759200027245F /* DailyQuestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6E1DBC2BE759200027245F /* DailyQuestView.swift */; };
+		FD6E1DBF2BE759270027245F /* LeaderboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6E1DBE2BE759270027245F /* LeaderboardView.swift */; };
+		FD6E1DC12BE7592E0027245F /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6E1DC02BE7592E0027245F /* Workout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +65,11 @@
 		FD6E1D892BE7386C0027245F /* ToDoListItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoListItemView.swift; sourceTree = "<group>"; };
 		FD6E1D8A2BE7386C0027245F /* ToDoListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoListView.swift; sourceTree = "<group>"; };
 		FD6E1D9C2BE739810027245F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FD6E1DB82BE759110027245F /* DailyQuestViewViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyQuestViewViewModel.swift; sourceTree = "<group>"; };
+		FD6E1DBA2BE7591B0027245F /* LeaderboardViewViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardViewViewModel.swift; sourceTree = "<group>"; };
+		FD6E1DBC2BE759200027245F /* DailyQuestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyQuestView.swift; sourceTree = "<group>"; };
+		FD6E1DBE2BE759270027245F /* LeaderboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardView.swift; sourceTree = "<group>"; };
+		FD6E1DC02BE7592E0027245F /* Workout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				FD6E1D6E2BE738620027245F /* ToDoListItem.swift */,
+				FD6E1DC02BE7592E0027245F /* Workout.swift */,
 				FD6E1D6F2BE738620027245F /* User.swift */,
 			);
 			path = Models;
@@ -139,6 +150,8 @@
 				FD6E1D742BE738670027245F /* MainViewViewModel.swift */,
 				FD6E1D752BE738670027245F /* NewItemViewViewModel.swift */,
 				FD6E1D762BE738670027245F /* ProfileViewViewModel.swift */,
+				FD6E1DB82BE759110027245F /* DailyQuestViewViewModel.swift */,
+				FD6E1DBA2BE7591B0027245F /* LeaderboardViewViewModel.swift */,
 				FD6E1D772BE738670027245F /* RegisterViewViewModel.swift */,
 				FD6E1D782BE738670027245F /* ToDoListItemsViewViewModel.swift */,
 				FD6E1D792BE738670027245F /* ToDoListViewViewModel.swift */,
@@ -154,7 +167,9 @@
 				FD6E1D842BE7386C0027245F /* MainView.swift */,
 				FD6E1D852BE7386C0027245F /* NewItemView.swift */,
 				FD6E1D862BE7386C0027245F /* ProfileView.swift */,
+				FD6E1DBE2BE759270027245F /* LeaderboardView.swift */,
 				FD6E1D872BE7386C0027245F /* RegisterView.swift */,
+				FD6E1DBC2BE759200027245F /* DailyQuestView.swift */,
 				FD6E1D882BE7386C0027245F /* TLButton.swift */,
 				FD6E1D892BE7386C0027245F /* ToDoListItemView.swift */,
 				FD6E1D8A2BE7386C0027245F /* ToDoListView.swift */,
@@ -250,16 +265,21 @@
 				FD6E1D802BE738670027245F /* ToDoListItemsViewViewModel.swift in Sources */,
 				FD6E1D6D2BE738550027245F /* Extension.swift in Sources */,
 				FD6E1D7E2BE738670027245F /* ProfileViewViewModel.swift in Sources */,
+				FD6E1DBB2BE7591B0027245F /* LeaderboardViewViewModel.swift in Sources */,
 				FD6E1D912BE7386C0027245F /* RegisterView.swift in Sources */,
 				FD6E1D902BE7386C0027245F /* ProfileView.swift in Sources */,
 				FD6E1D8C2BE7386C0027245F /* HeaderView.swift in Sources */,
 				FD6E1D8F2BE7386C0027245F /* NewItemView.swift in Sources */,
 				FD6E1D712BE738620027245F /* ToDoListItem.swift in Sources */,
+				FD6E1DB92BE759110027245F /* DailyQuestViewViewModel.swift in Sources */,
+				FD6E1DBF2BE759270027245F /* LeaderboardView.swift in Sources */,
 				FD6E1D942BE7386C0027245F /* ToDoListView.swift in Sources */,
 				FD6E1D7D2BE738670027245F /* NewItemViewViewModel.swift in Sources */,
 				FD6E1D8D2BE7386C0027245F /* LoginView.swift in Sources */,
 				FD6E1D932BE7386C0027245F /* ToDoListItemView.swift in Sources */,
+				FD6E1DBD2BE759200027245F /* DailyQuestView.swift in Sources */,
 				FD6E1D812BE738670027245F /* ToDoListViewViewModel.swift in Sources */,
+				FD6E1DC12BE7592E0027245F /* Workout.swift in Sources */,
 				FD6E1D7F2BE738670027245F /* RegisterViewViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

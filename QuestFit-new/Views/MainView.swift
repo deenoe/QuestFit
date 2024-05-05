@@ -21,9 +21,18 @@ struct MainView: View {
     @ViewBuilder
     var accountView: some View {
         TabView{
+            // DailyQuestView Here
+            DailyQuestView()
+                .tabItem{
+                    Label("Daily Quests", systemImage: "shield.checkered")
+                }
             ToDoListView(userId: viewModel.currentUserId)
                 .tabItem{
-                    Label("Home", systemImage: "house")
+                    Label("Workout Log", systemImage: "pencil.and.list.clipboard")
+                }
+            LeaderboardView()
+                .tabItem{
+                    Label("Leaderboard", systemImage: "trophy")
                 }
             ProfileView()
                 .tabItem{
