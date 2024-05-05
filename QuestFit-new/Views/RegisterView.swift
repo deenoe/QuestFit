@@ -11,11 +11,11 @@ struct RegisterView: View {
     @StateObject var viewModel = RegisterViewViewModel()
     var body: some View {
         VStack{
-            HeaderView(title: "Register",
-                       subtitle: "Organize Your Days",
+            HeaderView(title: "Registration",
+                       subtitle: "Your Journey Begins Here",
                        angle: -15,
-                       background: Color.gray)
-            .padding(.top, 25)
+                       background: Color.cyan)
+            .offset(y:-40)
             Form{
                 TextField("Full Name", text: $viewModel.name)
                     .textFieldStyle(DefaultTextFieldStyle())
@@ -28,16 +28,20 @@ struct RegisterView: View {
                     .textFieldStyle(DefaultTextFieldStyle())
                 TLButton(
                     title: "Register",
-                    background: .black
+                    background: .cyan
                 ){
                     viewModel.register()
                 }
                 .padding()
             }
-            .offset(y: -85)
-           
+            .frame(width: UIScreen.main.bounds.width * 0.8, height: UIScreen.main.bounds.height * 0.35)
+            .cornerRadius(8)
+            .offset(y: -115)
+        
         }
-        Spacer()
+        .background(.blue)
+      
+
     }
 }
 

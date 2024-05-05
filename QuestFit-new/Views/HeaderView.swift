@@ -16,27 +16,27 @@ struct HeaderView: View {
     var body: some View {
         ZStack{
             RoundedRectangle(cornerRadius: 0)
-                .foregroundColor(.gray)
+                .foregroundColor(background)
                 .rotationEffect(Angle(degrees:angle))
             VStack{
-                Image("RACCOON")
+                Image("knight")
                     .resizable()
                     .scaledToFit()
-                    .frame(width:70, height:70)
+                    .frame(width:90, height:90)
                 Text (title)
                     .foregroundColor(.white)
                     .bold()
                     .monospaced()
                     .font(.system(size:40))
                 Text(subtitle)
-                    .font(.system(size: 25))
+                    .font(.system(size: 22))
                     .foregroundColor(.white)
                     .monospaced()
             }
             .padding(.top, 80)
         }
-        .frame(width: UIScreen.main.bounds.width * 3,height: 400)
-        .offset(y:-180)
+        .frame(width: UIScreen.main.bounds.width * 3,height: 500)
+        .offset(y:-80)
     }
 }
 

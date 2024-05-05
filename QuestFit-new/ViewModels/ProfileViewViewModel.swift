@@ -17,6 +17,9 @@ class ProfileViewViewModel: ObservableObject{
         self.userSession = Auth.auth().currentUser
     }
     
+    
+    // func levelUp
+    // update a value with a document, given a user ID
     func fetchUser() {
         guard let userId = Auth.auth().currentUser?.uid else{
             return
@@ -70,6 +73,21 @@ class ProfileViewViewModel: ObservableObject{
 
         return leaderboardEntries
     }
+    
+    func updateUserLevel(newLevel: Int) {
+        guard let userId = Auth.auth().currentUser?.uid else {
+            return
+        }
+        let db = Firestore.firestore()
+        db.collection("users").document(userId).updateData(["userLevel": newLevel]) { error in
+            if let error = error {
+                print("Error updating user level: \(error.localizedDescription)")
+            } else {
+                print("User level updated successfully!")
+            }
+        }
+    }
+
 }
 
 

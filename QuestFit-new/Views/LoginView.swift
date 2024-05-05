@@ -14,14 +14,13 @@ struct LoginView: View {
         NavigationView{
                 VStack{
                     // Header
-                    HeaderView(title: "Raccoon Remind",
-                               subtitle:"Get Things Done.",
+                    HeaderView(title: "QuestFit",
+                               subtitle:"A Gamified Workout Journey",
                                angle: 15,
-                               background: Color.gray)
+                               background: Color.cyan)
                     .padding(.top, 25)
                     // Login Form
                     Form {
-                        
                         TextField("Email Address", text: $viewModel.email)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                             .autocapitalization(.none)
@@ -30,12 +29,14 @@ struct LoginView: View {
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                         TLButton(
                             title:"Login",
-                            background: .black
+                            background: .cyan
                         ){
                             viewModel.login()
                         }
                     }
-                    .offset(y:-50)
+                    .frame(width:UIScreen.main.bounds.width * 0.8)
+                    .cornerRadius(8)
+                    .offset(y:-80)
                     
                     // Create Account
                     VStack{
@@ -44,13 +45,17 @@ struct LoginView: View {
                                 .foregroundColor(Color.red)
                         }
                         Text("New user?")
+                            .foregroundStyle(.white)
                         NavigationLink("Create an Account", destination: RegisterView())
-                            .foregroundColor(.blue)
+                            .foregroundColor(.white)
                     }
+    
                     .padding(.bottom, 20)
-                    
                     Spacer()
                 }
+            
+        .background(Color.blue.colorScheme(.dark))
+        .ignoresSafeArea()
             }
         }
 }

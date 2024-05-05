@@ -19,11 +19,12 @@ struct LeaderboardView: View {
                 VStack(alignment: .leading) {
                     Text(users.username)
                         .font(.headline)
-                    Text("Level: \(users.level)")
+                    Text("Valor: \(users.level)")
                         .font(.subheadline)
                 }
+                .frame(height: UIScreen.main.bounds.height * 0.05)
             }
-            .navigationBarTitle("Leaderboards")
+            .navigationBarTitle("Most Honored ")
             .onAppear(){
                 self.viewModel.fetchData()
             }

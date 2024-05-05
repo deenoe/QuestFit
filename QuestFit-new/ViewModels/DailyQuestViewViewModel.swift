@@ -17,6 +17,8 @@ class DailyQuestViewViewModel: ObservableObject {
     
     private var currentCollection = "chest"
     
+  
+    
     func fetchQuests() {
         print("Accessing \(currentCollection)")
         
