@@ -30,15 +30,16 @@
 		FD6E1D922BE7386C0027245F /* TLButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6E1D882BE7386C0027245F /* TLButton.swift */; };
 		FD6E1D932BE7386C0027245F /* ToDoListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6E1D892BE7386C0027245F /* ToDoListItemView.swift */; };
 		FD6E1D942BE7386C0027245F /* ToDoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6E1D8A2BE7386C0027245F /* ToDoListView.swift */; };
-		FD6E1D972BE738B30027245F /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = FD6E1D962BE738B30027245F /* FirebaseAuth */; };
-		FD6E1D992BE738B30027245F /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = FD6E1D982BE738B30027245F /* FirebaseFirestore */; };
-		FD6E1D9B2BE738B30027245F /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FD6E1D9A2BE738B30027245F /* FirebaseFirestoreSwift */; };
 		FD6E1D9D2BE739810027245F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD6E1D9C2BE739810027245F /* GoogleService-Info.plist */; };
 		FD6E1DB92BE759110027245F /* DailyQuestViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6E1DB82BE759110027245F /* DailyQuestViewViewModel.swift */; };
 		FD6E1DBB2BE7591B0027245F /* LeaderboardViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6E1DBA2BE7591B0027245F /* LeaderboardViewViewModel.swift */; };
 		FD6E1DBD2BE759200027245F /* DailyQuestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6E1DBC2BE759200027245F /* DailyQuestView.swift */; };
 		FD6E1DBF2BE759270027245F /* LeaderboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6E1DBE2BE759270027245F /* LeaderboardView.swift */; };
-		FD6E1DC12BE7592E0027245F /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6E1DC02BE7592E0027245F /* Workout.swift */; };
+		FD6E1DC52BE79C4B0027245F /* LoadWorkouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6E1DC42BE79C4B0027245F /* LoadWorkouts.swift */; };
+		FD6E1DC72BE79D5F0027245F /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = FD6E1DC62BE79D5F0027245F /* FirebaseAuth */; };
+		FD6E1DC92BE79D5F0027245F /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = FD6E1DC82BE79D5F0027245F /* FirebaseFirestore */; };
+		FD6E1DCB2BE79D5F0027245F /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FD6E1DCA2BE79D5F0027245F /* FirebaseFirestoreSwift */; };
+		FD6E1DCD2BE79F0E0027245F /* Workouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6E1DCC2BE79F0E0027245F /* Workouts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,7 +72,8 @@
 		FD6E1DBA2BE7591B0027245F /* LeaderboardViewViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardViewViewModel.swift; sourceTree = "<group>"; };
 		FD6E1DBC2BE759200027245F /* DailyQuestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyQuestView.swift; sourceTree = "<group>"; };
 		FD6E1DBE2BE759270027245F /* LeaderboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardView.swift; sourceTree = "<group>"; };
-		FD6E1DC02BE7592E0027245F /* Workout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
+		FD6E1DC42BE79C4B0027245F /* LoadWorkouts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadWorkouts.swift; sourceTree = "<group>"; };
+		FD6E1DCC2BE79F0E0027245F /* Workouts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workouts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,9 +81,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD6E1D972BE738B30027245F /* FirebaseAuth in Frameworks */,
-				FD6E1D992BE738B30027245F /* FirebaseFirestore in Frameworks */,
-				FD6E1D9B2BE738B30027245F /* FirebaseFirestoreSwift in Frameworks */,
+				FD6E1DC72BE79D5F0027245F /* FirebaseAuth in Frameworks */,
+				FD6E1DC92BE79D5F0027245F /* FirebaseFirestore in Frameworks */,
+				FD6E1DCB2BE79D5F0027245F /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,9 +141,10 @@
 			isa = PBXGroup;
 			children = (
 				FD6E1D6E2BE738620027245F /* ToDoListItem.swift */,
-				FD6E1DC02BE7592E0027245F /* Workout.swift */,
 				4E10FD852BE79929001A12B4 /* Leaderboard.swift */,
 				FD6E1D6F2BE738620027245F /* User.swift */,
+				FD6E1DC42BE79C4B0027245F /* LoadWorkouts.swift */,
+				FD6E1DCC2BE79F0E0027245F /* Workouts.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -197,9 +200,9 @@
 			);
 			name = "QuestFit-new";
 			packageProductDependencies = (
-				FD6E1D962BE738B30027245F /* FirebaseAuth */,
-				FD6E1D982BE738B30027245F /* FirebaseFirestore */,
-				FD6E1D9A2BE738B30027245F /* FirebaseFirestoreSwift */,
+				FD6E1DC62BE79D5F0027245F /* FirebaseAuth */,
+				FD6E1DC82BE79D5F0027245F /* FirebaseFirestore */,
+				FD6E1DCA2BE79D5F0027245F /* FirebaseFirestoreSwift */,
 			);
 			productName = "QuestFit-new";
 			productReference = FD6E1D5A2BE737CE0027245F /* QuestFit-new.app */;
@@ -261,6 +264,7 @@
 			files = (
 				FD6E1D7B2BE738670027245F /* LoginViewViewModel.swift in Sources */,
 				FD6E1D922BE7386C0027245F /* TLButton.swift in Sources */,
+				FD6E1DC52BE79C4B0027245F /* LoadWorkouts.swift in Sources */,
 				FD6E1D8E2BE7386C0027245F /* MainView.swift in Sources */,
 				FD6E1D722BE738620027245F /* User.swift in Sources */,
 				FD6E1D7C2BE738670027245F /* MainViewViewModel.swift in Sources */,
@@ -283,8 +287,8 @@
 				FD6E1D932BE7386C0027245F /* ToDoListItemView.swift in Sources */,
 				FD6E1DBD2BE759200027245F /* DailyQuestView.swift in Sources */,
 				FD6E1D812BE738670027245F /* ToDoListViewViewModel.swift in Sources */,
-				FD6E1DC12BE7592E0027245F /* Workout.swift in Sources */,
 				FD6E1D7F2BE738670027245F /* RegisterViewViewModel.swift in Sources */,
+				FD6E1DCD2BE79F0E0027245F /* Workouts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,17 +507,17 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		FD6E1D962BE738B30027245F /* FirebaseAuth */ = {
+		FD6E1DC62BE79D5F0027245F /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FD6E1D952BE738B30027245F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
 		};
-		FD6E1D982BE738B30027245F /* FirebaseFirestore */ = {
+		FD6E1DC82BE79D5F0027245F /* FirebaseFirestore */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FD6E1D952BE738B30027245F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
 		};
-		FD6E1D9A2BE738B30027245F /* FirebaseFirestoreSwift */ = {
+		FD6E1DCA2BE79D5F0027245F /* FirebaseFirestoreSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FD6E1D952BE738B30027245F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestoreSwift;

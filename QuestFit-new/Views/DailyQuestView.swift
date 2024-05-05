@@ -4,26 +4,25 @@
 //
 //  Created by Miguel Bunag on 5/4/24.
 //
-
 import SwiftUI
-import Foundation
+
 
 struct DailyQuestView: View {
-    // @StateObject var viewModel: DailyQuestViewViewModel
-    // @FirestoreQuery var items: [Workout]
-    
-    // init()
-    
-    
-    
-    
-    
-    
+    @ObservedObject var viewModel = DailyQuestViewViewModel()
+
+
     var body: some View {
-        VStack{
-            Text("Daily Quests")
+        NavigationView {
+            List(viewModel.quests) { workout in
+                VStack(alignment: .leading) {
+                    Text(workout.exerciseName)
+                }
+            }
+            .navigationTitle("Daily Quests")
         }
-        
+        .onAppear() {
+            self.viewModel.fetchQuests()
+        }
     }
 }
 

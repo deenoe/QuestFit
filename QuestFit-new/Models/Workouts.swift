@@ -4,10 +4,10 @@
 //
 //  Created by Miguel Bunag on 5/4/24.
 //
-
 import Foundation
-struct Workout: Identifiable, Codable {
-    var id: String // Document ID in Firestore
+
+struct Workouts: Identifiable, Encodable, Decodable {
+    var id = UUID()
     var exerciseName: String
     var setCount: Int
     var repCount: Int
