@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E10FD862BE79929001A12B4 /* Leaderboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E10FD852BE79929001A12B4 /* Leaderboard.swift */; };
 		FD6E1D5E2BE737CE0027245F /* QuestFit_newApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6E1D5D2BE737CE0027245F /* QuestFit_newApp.swift */; };
 		FD6E1D622BE737CF0027245F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD6E1D612BE737CF0027245F /* Assets.xcassets */; };
 		FD6E1D652BE737CF0027245F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD6E1D642BE737CF0027245F /* Preview Assets.xcassets */; };
@@ -41,6 +42,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E10FD852BE79929001A12B4 /* Leaderboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Leaderboard.swift; sourceTree = "<group>"; };
 		FD6E1D5A2BE737CE0027245F /* QuestFit-new.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "QuestFit-new.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD6E1D5D2BE737CE0027245F /* QuestFit_newApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestFit_newApp.swift; sourceTree = "<group>"; };
 		FD6E1D612BE737CF0027245F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 			children = (
 				FD6E1D6E2BE738620027245F /* ToDoListItem.swift */,
 				FD6E1DC02BE7592E0027245F /* Workout.swift */,
+				4E10FD852BE79929001A12B4 /* Leaderboard.swift */,
 				FD6E1D6F2BE738620027245F /* User.swift */,
 			);
 			path = Models;
@@ -267,6 +270,7 @@
 				FD6E1D7E2BE738670027245F /* ProfileViewViewModel.swift in Sources */,
 				FD6E1DBB2BE7591B0027245F /* LeaderboardViewViewModel.swift in Sources */,
 				FD6E1D912BE7386C0027245F /* RegisterView.swift in Sources */,
+				4E10FD862BE79929001A12B4 /* Leaderboard.swift in Sources */,
 				FD6E1D902BE7386C0027245F /* ProfileView.swift in Sources */,
 				FD6E1D8C2BE7386C0027245F /* HeaderView.swift in Sources */,
 				FD6E1D8F2BE7386C0027245F /* NewItemView.swift in Sources */,

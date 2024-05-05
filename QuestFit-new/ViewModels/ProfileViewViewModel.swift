@@ -11,7 +11,11 @@ import FirebaseFirestore
 
 class ProfileViewViewModel: ObservableObject{
     @Published var user : User? = nil
-    init() {}
+    @Published var userSession: FirebaseAuth.User?
+    
+    init() {
+        self.userSession = Auth.auth().currentUser
+    }
     
     func fetchUser() {
         guard let userId = Auth.auth().currentUser?.uid else{
@@ -27,7 +31,8 @@ class ProfileViewViewModel: ObservableObject{
                     id: data["id"] as? String ?? "",
                     name: data["name"] as? String ?? "",
                     email: data["email"] as? String ?? "",
-                    joined: data["joined"] as? TimeInterval ?? 0)
+                    joined: data["joined"] as? TimeInterval ?? 0,
+                    userLevel: data["userLevel"] as? Int ?? 12)//I think since it is not set in Firebase, it defaults to the optional value of 12
             }
         }
     }
@@ -38,4 +43,33 @@ class ProfileViewViewModel: ObservableObject{
             print(error)
         }
     }
+    
+    func fetchLeaderboard() async throws -> [LeaderboardEntry] {
+        var leaderboardEntries: [LeaderboardEntry] = []
+
+        do {
+            let snapshot = try await Firestore.firestore()
+                .collection("users")
+                .order(by: "user level", descending: true)
+                .limit(to: 50)
+                .getDocuments()
+
+            for document in snapshot.documents {
+                guard let username = document["username"] as? String,
+                      let level = document["user level"] as? Int else {
+                    continue // Skip this entry if data is not valid
+                }
+
+                let leaderboardEntry = LeaderboardEntry(username: username, level: level)
+                leaderboardEntries.append(leaderboardEntry)
+            }
+
+        } catch {
+            throw error
+        }
+
+        return leaderboardEntries
+    }
 }
+
+

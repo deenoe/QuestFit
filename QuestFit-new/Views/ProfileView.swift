@@ -50,6 +50,11 @@ struct ProfileView: View {
                     .bold()
                 Text("\(Date(timeIntervalSince1970: user.joined).formatted(date:.abbreviated, time: .shortened))")
             }
+            HStack{
+                Text("Level: ")
+                    .bold()
+                Text("\(user.userLevel)")
+            }
         }
         Button("Sign Out"){
             viewModel.logOut()

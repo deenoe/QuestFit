@@ -13,6 +13,7 @@ class RegisterViewViewModel: ObservableObject{
     @Published var name = ""
     @Published var email = ""
     @Published var password = ""
+    @Published var userLevel = 1
     @Published var errorMessage = ""
     init() {}
     
@@ -34,7 +35,9 @@ class RegisterViewViewModel: ObservableObject{
         let newUser = User (id:id,
                             name: name,
                             email: email,
-                            joined: Date().timeIntervalSince1970)
+                            joined: Date().timeIntervalSince1970,
+                            userLevel: userLevel
+                            )
         let db = Firestore.firestore()
         
         db.collection("users")
