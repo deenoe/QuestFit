@@ -25,27 +25,30 @@ struct DailyQuestView: View {
                     List(viewModel.quests) { workout in
                         HStack {
                             Text(workout.exerciseName)
-                                .frame(height: UIScreen.main.bounds.width*0.15)
+                                .frame(height: UIScreen.main.bounds.width * 0.15)
                             Spacer()
                             Text("\(workout.exp) PTS")
-                            Button{
-                                print("updating user level")
-                                userModel.updateUserLevel(newLevel: user.userLevel + workout.exp)
-                                userModel.fetchUser()
+                            Button {
+                                if !QuestManager.shared.isQuestCompletedToday(questId: workout.id) {
+                                    print("updating user level")
+                                    userModel.updateUserLevel(newLevel: user.userLevel + workout.exp)
+                                    userModel.fetchUser()
+                                    QuestManager.shared.markQuestAsCompleted(questId: workout.id)
+                                }
                             } label: {
-                                Image(systemName: "checkmark.circle.fill")
+                                if QuestManager.shared.isQuestCompletedToday(questId: workout.id) {
+                                    Image(systemName: "checkmark.circle.fill")
+                                } else {
+                                    Image(systemName: "circle")
+                                }
                             }
+                            .disabled(QuestManager.shared.isQuestCompletedToday(questId: workout.id))
                         }
+                        .opacity(QuestManager.shared.isQuestCompletedToday(questId: workout.id) ? 0.5 : 1.0)
+
+
                     }
                     // .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height )
-                    Button("Confirm Quests"){
-                    }
-                    .frame(width: UIScreen.main.bounds.width * 0.85, height: UIScreen.main.bounds.height * 0.05)
-                    .border(Color.black, width: 4)
-                    .foregroundStyle(.black)
-                    .bold()
-                    .background(Color.gray.opacity(0.8))
-                    .cornerRadius(7)
                     .padding()
                     Spacer()
                 }
@@ -68,4 +71,3 @@ struct DailyQuestView: View {
         DailyQuestView()
      }
  }
- 

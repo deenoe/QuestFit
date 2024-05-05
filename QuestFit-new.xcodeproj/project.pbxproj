@@ -40,6 +40,7 @@
 		FD6E1DC92BE79D5F0027245F /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = FD6E1DC82BE79D5F0027245F /* FirebaseFirestore */; };
 		FD6E1DCB2BE79D5F0027245F /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FD6E1DCA2BE79D5F0027245F /* FirebaseFirestoreSwift */; };
 		FD6E1DCD2BE79F0E0027245F /* Workouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6E1DCC2BE79F0E0027245F /* Workouts.swift */; };
+		FD9C56322BE7D889009E5C6B /* QuestManagerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9C56312BE7D889009E5C6B /* QuestManagerViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		FD6E1DBE2BE759270027245F /* LeaderboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardView.swift; sourceTree = "<group>"; };
 		FD6E1DC42BE79C4B0027245F /* LoadWorkouts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadWorkouts.swift; sourceTree = "<group>"; };
 		FD6E1DCC2BE79F0E0027245F /* Workouts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workouts.swift; sourceTree = "<group>"; };
+		FD9C56312BE7D889009E5C6B /* QuestManagerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestManagerViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 				FD6E1D772BE738670027245F /* RegisterViewViewModel.swift */,
 				FD6E1D782BE738670027245F /* ToDoListItemsViewViewModel.swift */,
 				FD6E1D792BE738670027245F /* ToDoListViewViewModel.swift */,
+				FD9C56312BE7D889009E5C6B /* QuestManagerViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 				FD6E1D7D2BE738670027245F /* NewItemViewViewModel.swift in Sources */,
 				FD6E1D8D2BE7386C0027245F /* LoginView.swift in Sources */,
 				FD6E1D932BE7386C0027245F /* ToDoListItemView.swift in Sources */,
+				FD9C56322BE7D889009E5C6B /* QuestManagerViewModel.swift in Sources */,
 				FD6E1DBD2BE759200027245F /* DailyQuestView.swift in Sources */,
 				FD6E1D812BE738670027245F /* ToDoListViewViewModel.swift in Sources */,
 				FD6E1D7F2BE738670027245F /* RegisterViewViewModel.swift in Sources */,
