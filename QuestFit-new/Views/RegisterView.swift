@@ -34,12 +34,12 @@ struct RegisterView: View {
                 }
                 .padding()
             }
-            .frame(width: UIScreen.main.bounds.width * 0.8, height: UIScreen.main.bounds.height * 0.35)
+            .frame(width: UIScreen.main.bounds.width * 0.8)
             .cornerRadius(8)
-            .offset(y: -115)
+            .offset(y: -145)
         
         }
-        .background(.blue)
+        .background(.indigo)
       
 
     }

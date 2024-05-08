@@ -59,7 +59,6 @@ func loadChest() {
 
 
 func loadBack() {
-    print("Loading Back Workouts..")
     let workouts = [
         Workouts(exerciseName: "Pull-Ups", setCount: 3, repCount: 10, exp: 8),
         Workouts(exerciseName: "Deadlifts", setCount: 4, repCount: 8, exp: 9),
@@ -82,14 +81,14 @@ func loadBack() {
         Workouts(exerciseName: "Chin-Ups", setCount: 3, repCount: 10, exp: 8),
         Workouts(exerciseName: "Wide Grip Rows", setCount: 3, repCount: 10, exp: 7)
     ]
-    
+    print("Loading Back Workouts.. total of \(workouts.count)")
     for workout in workouts {
         addWorkoutToFirestore(workout: workout, collectionName: "back")
     }
 }
 
 func loadLegs() {
-    print("Loading Leg Workouts..")
+    
     let workouts = [
         Workouts(exerciseName: "Squats", setCount: 4, repCount: 8, exp: 9),
         Workouts(exerciseName: "Leg Press", setCount: 3, repCount: 10, exp: 8),
@@ -112,14 +111,13 @@ func loadLegs() {
         Workouts(exerciseName: "Cable Leg Raises", setCount: 3, repCount: 10, exp: 8),
         Workouts(exerciseName: "Single Leg Press", setCount: 3, repCount: 10, exp: 7)
     ]
-    
+    print("Loading Leg Workouts.. total of \(workouts.count)")
     for workout in workouts {
         addWorkoutToFirestore(workout: workout, collectionName: "legs")
     }
 }
 
 func loadArms() {
-    print("Loading Arm Workouts..")
     let workouts = [
         Workouts(exerciseName: "Bicep Curls", setCount: 3, repCount: 10, exp: 8),
         Workouts(exerciseName: "Tricep Dips", setCount: 3, repCount: 10, exp: 8),
@@ -142,14 +140,13 @@ func loadArms() {
         Workouts(exerciseName: "EZ-Bar Curls", setCount: 3, repCount: 10, exp: 8),
         Workouts(exerciseName: "Cable Curls", setCount: 3, repCount: 10, exp: 7)
     ]
-    
+    print("Loading Arm Workouts.. total of \(workouts.count)")
     for workout in workouts {
         addWorkoutToFirestore(workout: workout, collectionName: "arms")
     }
 }
 
 func loadCore() {
-    print("Loading Core Workouts..")
     let workouts = [
         Workouts(exerciseName: "Planks", setCount: 3, repCount: 10, exp: 8),
         Workouts(exerciseName: "Russian Twists", setCount: 3, repCount: 12, exp: 7),
@@ -172,7 +169,7 @@ func loadCore() {
         Workouts(exerciseName: "Lying Windshield Wipers", setCount: 3, repCount: 10, exp: 8),
         Workouts(exerciseName: "Scissor Kicks", setCount: 3, repCount: 12, exp: 7)
     ]
-    
+    print("Loading Core Workouts.. total of \(workouts.count)")
     for workout in workouts {
         addWorkoutToFirestore(workout: workout, collectionName: "core")
     }

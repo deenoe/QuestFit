@@ -1,6 +1,6 @@
 //
 //  ToDoListView.swift
-//  RaccoonRemind
+//
 //
 //  Created by Miguel Bunag on 5/3/24.
 //
@@ -21,7 +21,12 @@ struct ToDoListView: View {
     }
     var body: some View {
         NavigationView {
-            VStack{
+            VStack(alignment: .leading){
+                Text("Workout Log")
+                    .font(.largeTitle)
+                    .monospaced()
+                    .foregroundStyle(.indigo)
+                    .bold()
                 List(items)  {item in
                     ToDoListItemView(item:item)
                         .swipeActions {
@@ -33,12 +38,14 @@ struct ToDoListView: View {
                     }
                     .listStyle(PlainListStyle())
                 }
-                .navigationTitle("Workout Log ")
+            .padding()
                 .toolbar {
                     Button{
                         viewModel.showingNewItemView = true
                     } label: {
                         Image(systemName: "plus")
+                            .bold()
+                            .foregroundColor(.indigo)
                     }
                 }
                 .sheet(isPresented: $viewModel.showingNewItemView){

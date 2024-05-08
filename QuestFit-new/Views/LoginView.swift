@@ -21,6 +21,7 @@ struct LoginView: View {
                     .padding(.top, 25)
                     // Login Form
                     Form {
+                        Spacer()
                         TextField("Email Address", text: $viewModel.email)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                             .autocapitalization(.none)
@@ -49,12 +50,10 @@ struct LoginView: View {
                         NavigationLink("Create an Account", destination: RegisterView())
                             .foregroundColor(.white)
                     }
-    
                     .padding(.bottom, 20)
-                    Spacer()
+                    .offset(y: -50)
                 }
-            
-        .background(Color.blue.colorScheme(.dark))
+                .background(Color.indigo.colorScheme(.dark))
         .ignoresSafeArea()
             }
         }

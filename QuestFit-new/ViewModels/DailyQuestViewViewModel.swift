@@ -17,11 +17,14 @@ class DailyQuestViewViewModel: ObservableObject {
     
     private var currentCollection = "chest"
     
+    private var bodyGroups = ["chest", "arms", "back", "legs", "core"]
+    
   
     
     func fetchQuests() {
-        print("Accessing \(currentCollection)")
         
+        rotateBodyGroup()
+        print("Accessing \(currentCollection)")
         // Check if quests are saved locally and last fetched within 24 hours
         if let savedQuests = loadQuestsFromStorage(),
            let lastFetchedDate = UserDefaults.standard.object(forKey: "LastFetchedDate") as? Date,
@@ -76,6 +79,29 @@ class DailyQuestViewViewModel: ObservableObject {
             print("Fetched quests from Firestore and saved to local storage")
         }
     }
+    
+    private func rotateBodyGroup() {
+        var currentIndex = UserDefaults.standard.integer(forKey: "CurrentBodyGroupIndex")
+        if currentIndex == 0 {
+            // If currentIndex is 0 or not found in UserDefaults, default to the first body group
+            currentCollection = bodyGroups.first ?? "chest"
+        } else {
+            // Retrieve the current body group from UserDefaults
+            currentCollection = bodyGroups[currentIndex]
+        }
+        
+        // Calculate the next index
+        var nextIndex = currentIndex + 1
+        if nextIndex >= bodyGroups.count {
+            // If nextIndex exceeds the bounds of the array, wrap around to the first body group
+            nextIndex = 0
+        }
+        
+        // Store the next index in UserDefaults
+        UserDefaults.standard.set(nextIndex, forKey: "CurrentBodyGroupIndex")
+    }
+
+
     
     private func saveQuestsToStorage(_ quests: [Workouts]) {
         do {
