@@ -12,6 +12,8 @@ import FirebaseFirestore
 class ProfileViewViewModel: ObservableObject{
     @Published var user : User? = nil
     @Published var userSession: FirebaseAuth.User?
+    @Published var userPic: Image? = nil
+    var availableTitles: [String]  = []
     
     init() {
         self.userSession = Auth.auth().currentUser
@@ -36,9 +38,14 @@ class ProfileViewViewModel: ObservableObject{
                     email: data["email"] as? String ?? "",
                     joined: data["joined"] as? TimeInterval ?? 0,
                     userLevel: data["userLevel"] as? Int ?? 12)//I think since it is not set in Firebase, it defaults to the optional value of 12
+                
+                if let userLevel = self?.user?.userLevel {
+                                self?.updateAvailableTitles(userLevel: userLevel)
+                            }
             }
         }
     }
+    
     func logOut(){
         do{
             try Auth.auth().signOut()
@@ -88,6 +95,23 @@ class ProfileViewViewModel: ObservableObject{
         }
     }
 
-}
 
 
+    func updateAvailableTitles(userLevel: Int) {
+            if userLevel < 100 {
+                availableTitles = TitleData.beginnerTitles
+            } else if userLevel < 250 {
+                availableTitles = TitleData.beginnerTitles + TitleData.intermediateTitles
+            } else if userLevel < 500 {
+                availableTitles = TitleData.beginnerTitles + TitleData.intermediateTitles + TitleData.advancedTitles
+            } else {
+                availableTitles = TitleData.beginnerTitles + TitleData.intermediateTitles + TitleData.advancedTitles + TitleData.expertTitles
+            }
+        }
+    
+    
+//    func selectedPhoto(){
+//        userPic = Image("knight")
+//    }
+    
+    }

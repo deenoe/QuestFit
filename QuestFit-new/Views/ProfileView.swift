@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ProfileView: View {
     @StateObject var viewModel = ProfileViewViewModel()
+    @State private var selectedTitleIndex = 0
+    //@State private var selectedProfile = 0
     var body: some View {
         NavigationView{
             VStack{
@@ -18,7 +20,7 @@ struct ProfileView: View {
                     Text("Loading Profile...")
                 }
             }
-            .navigationTitle("Profile")
+            .navigationTitle(Text("\(viewModel.user?.name ?? "User")'s Profile"))
         }
         .onAppear(){
             viewModel.fetchUser()
@@ -27,14 +29,40 @@ struct ProfileView: View {
     @ViewBuilder
     func profile(user:User) -> some View{
         // Avatar
-        Image(systemName: "person.circle")
-            .resizable()
-            .aspectRatio(contentMode: .fit)
-            .foregroundColor(Color.blue)
-            .frame(width: 125, height: 125)
-            .padding()
+//        Button(action: {
+//                // Perform action when profile picture is clicked (e.g., show picker)
+//                // You can add your logic here to show the picker for selecting profile photo
+//            }) {
+//                if let selectedPhoto = viewModel.selectedPhoto {
+//                    selectedPhoto // Use the selected photo if available
+//                        //.resizable()
+//                        //.aspectRatio(contentMode: .fit)
+//                       // .foregroundColor(Color.blue)
+//                        //.frame(width: 125, height: 125)
+//                        //.padding()
+//                } else {
+//                    Image(systemName: "person.circle") // Use default profile picture if no photo selected
+//                        .resizable()
+//                        .aspectRatio(contentMode: .fit)
+//                        .foregroundColor(Color.blue)
+//                        .frame(width: 125, height: 125)
+//                        .padding()
+//                }
+//            }
+        VStack {
+                // Picker to select a title from the beginner titles array
+            Picker("Select Title", selection: $selectedTitleIndex) {
+                        ForEach(0..<viewModel.availableTitles.count, id: \.self) { index in
+                            Text(viewModel.availableTitles[index]).tag(index)
+                        }
+                    } 
+
+                .pickerStyle(DefaultPickerStyle())
+                .padding()
+                }
         // Info
         VStack(alignment: .leading){
+            
             HStack{
                 Text("Name: ")
                     .bold()
@@ -64,7 +92,18 @@ struct ProfileView: View {
     
     }
 }
+        
 
 #Preview {
     ProfileView()
 }
+
+
+/*
+ Replace profile with user name uptop
+ icon showing avatar
+ Title right below
+ valor
+ pickable color
+ 
+ */

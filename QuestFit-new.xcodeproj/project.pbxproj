@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4E10FD862BE79929001A12B4 /* Leaderboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E10FD852BE79929001A12B4 /* Leaderboard.swift */; };
+		4EC85A2C2BEBEF9C000B4379 /* Titles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC85A2B2BEBEF9C000B4379 /* Titles.swift */; };
+		4EC85A2E2BEBF80D000B4379 /* TitlesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC85A2D2BEBF80D000B4379 /* TitlesViewModel.swift */; };
 		FD6E1D5E2BE737CE0027245F /* QuestFit_newApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6E1D5D2BE737CE0027245F /* QuestFit_newApp.swift */; };
 		FD6E1D622BE737CF0027245F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD6E1D612BE737CF0027245F /* Assets.xcassets */; };
 		FD6E1D652BE737CF0027245F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD6E1D642BE737CF0027245F /* Preview Assets.xcassets */; };
@@ -45,6 +47,8 @@
 
 /* Begin PBXFileReference section */
 		4E10FD852BE79929001A12B4 /* Leaderboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Leaderboard.swift; sourceTree = "<group>"; };
+		4EC85A2B2BEBEF9C000B4379 /* Titles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Titles.swift; sourceTree = "<group>"; };
+		4EC85A2D2BEBF80D000B4379 /* TitlesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlesViewModel.swift; sourceTree = "<group>"; };
 		FD6E1D5A2BE737CE0027245F /* QuestFit-new.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "QuestFit-new.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD6E1D5D2BE737CE0027245F /* QuestFit_newApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestFit_newApp.swift; sourceTree = "<group>"; };
 		FD6E1D612BE737CF0027245F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -143,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				FD6E1D6E2BE738620027245F /* ToDoListItem.swift */,
+				4EC85A2B2BEBEF9C000B4379 /* Titles.swift */,
 				4E10FD852BE79929001A12B4 /* Leaderboard.swift */,
 				FD6E1D6F2BE738620027245F /* User.swift */,
 				FD6E1DC42BE79C4B0027245F /* LoadWorkouts.swift */,
@@ -158,6 +163,7 @@
 				FD6E1D742BE738670027245F /* MainViewViewModel.swift */,
 				FD6E1D752BE738670027245F /* NewItemViewViewModel.swift */,
 				FD6E1D762BE738670027245F /* ProfileViewViewModel.swift */,
+				4EC85A2D2BEBF80D000B4379 /* TitlesViewModel.swift */,
 				FD6E1DB82BE759110027245F /* DailyQuestViewViewModel.swift */,
 				FD6E1DBA2BE7591B0027245F /* LeaderboardViewViewModel.swift */,
 				FD6E1D772BE738670027245F /* RegisterViewViewModel.swift */,
@@ -290,8 +296,10 @@
 				FD6E1D932BE7386C0027245F /* ToDoListItemView.swift in Sources */,
 				FD9C56322BE7D889009E5C6B /* QuestManagerViewModel.swift in Sources */,
 				FD6E1DBD2BE759200027245F /* DailyQuestView.swift in Sources */,
+				4EC85A2E2BEBF80D000B4379 /* TitlesViewModel.swift in Sources */,
 				FD6E1D812BE738670027245F /* ToDoListViewViewModel.swift in Sources */,
 				FD6E1D7F2BE738670027245F /* RegisterViewViewModel.swift in Sources */,
+				4EC85A2C2BEBEF9C000B4379 /* Titles.swift in Sources */,
 				FD6E1DCD2BE79F0E0027245F /* Workouts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
