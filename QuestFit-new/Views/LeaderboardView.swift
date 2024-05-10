@@ -13,23 +13,36 @@ struct LeaderboardView: View {
     var body: some View {
         //let mainColor = Color(red: 0/255, green: 55/255, blue: 0/255)
         //let accentColor = Color(red: 152/255, green: 158/255, blue: 143/255)
-        
-        NavigationView{
-            List(viewModel.users){ users in
-                VStack(alignment: .leading) {
-                    Text(users.username)
-                        .font(.headline)
-                    Text("Valor: \(users.level)")
-                        .font(.subheadline)
+        VStack(alignment: .leading){
+            Text("Most Honored")
+                .font(.title)
+                .bold()
+                .monospaced()
+                .padding()
+                .foregroundStyle(.indigo)
+            NavigationView{
+                List(viewModel.users){ users in
+                    VStack(alignment: .leading) {
+                        Text(users.username)
+                            .font(.headline)
+                            .monospaced()
+                        Text("Valor: \(users.level)")
+                            .font(.subheadline)
+                            .monospaced()
+                    }
+                    .frame(height: UIScreen.main.bounds.height * 0.0423)
+                    .foregroundStyle(.indigo)
+                    .listRowBackground(Color.white)
                 }
-                .frame(height: UIScreen.main.bounds.height * 0.05)
+                .scrollContentBackground(.hidden)
+                .background(.indigo)
+                
+                .onAppear(){
+                    self.viewModel.fetchData()
+                }
             }
-            .navigationBarTitle("Most Honored ")
-            .onAppear(){
-                self.viewModel.fetchData()
-            }
+            .padding(.bottom,7)
         }
-        
         /*
         VStack {
             Text("Leaderboard")

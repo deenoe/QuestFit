@@ -28,7 +28,7 @@ class DailyQuestViewViewModel: ObservableObject {
         // Check if quests are saved locally and last fetched within 24 hours
         if let savedQuests = loadQuestsFromStorage(),
            let lastFetchedDate = UserDefaults.standard.object(forKey: "LastFetchedDate") as? Date,
-           Date().timeIntervalSince(lastFetchedDate) < 24 * 60 * 60 {
+           Date().timeIntervalSince(lastFetchedDate) < 5 * 60 {
             // Use saved quests from local storage
             self.quests = savedQuests
             print("Loaded quests from local storage")

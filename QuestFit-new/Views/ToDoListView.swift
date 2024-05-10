@@ -27,6 +27,7 @@ struct ToDoListView: View {
                     .monospaced()
                     .foregroundStyle(.indigo)
                     .bold()
+                    .padding()
                 List(items)  {item in
                     ToDoListItemView(item:item)
                         .swipeActions {
@@ -38,7 +39,6 @@ struct ToDoListView: View {
                     }
                     .listStyle(PlainListStyle())
                 }
-            .padding()
                 .toolbar {
                     Button{
                         viewModel.showingNewItemView = true

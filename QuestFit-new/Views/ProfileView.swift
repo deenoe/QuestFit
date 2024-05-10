@@ -1,109 +1,103 @@
-//
 //  ProfileView.swift
-//  RaccoonRemind
+//  Questfit
 //
 //  Created by Miguel Bunag on 5/3/24.
 //
 
 import SwiftUI
+import PhotosUI
 
 struct ProfileView: View {
     @StateObject var viewModel = ProfileViewViewModel()
     @State private var selectedTitleIndex = 0
-    //@State private var selectedProfile = 0
+    @State private var selectedImageIndex = 0
+
     var body: some View {
         NavigationView{
-            VStack{
-                if let user = viewModel.user{
-                    profile(user: user)
-                } else {
-                    Text("Loading Profile...")
+            ZStack{
+                Color.indigo
+                VStack{
+                    if let user = viewModel.user{
+                        profile(user: user)
+                            .padding()
+                        
+                    } else {
+                        Text("Loading Profile...")
+                    }
                 }
             }
-            .navigationTitle(Text("\(viewModel.user?.name ?? "User")'s Profile"))
         }
         .onAppear(){
             viewModel.fetchUser()
         }
+
     }
     @ViewBuilder
     func profile(user:User) -> some View{
-        // Avatar
-//        Button(action: {
-//                // Perform action when profile picture is clicked (e.g., show picker)
-//                // You can add your logic here to show the picker for selecting profile photo
-//            }) {
-//                if let selectedPhoto = viewModel.selectedPhoto {
-//                    selectedPhoto // Use the selected photo if available
-//                        //.resizable()
-//                        //.aspectRatio(contentMode: .fit)
-//                       // .foregroundColor(Color.blue)
-//                        //.frame(width: 125, height: 125)
-//                        //.padding()
-//                } else {
-//                    Image(systemName: "person.circle") // Use default profile picture if no photo selected
-//                        .resizable()
-//                        .aspectRatio(contentMode: .fit)
-//                        .foregroundColor(Color.blue)
-//                        .frame(width: 125, height: 125)
-//                        .padding()
-//                }
-//            }
+        Text(user.name)
+            .monospaced()
+            .foregroundColor(.white)
+            .bold()
+            .font(.largeTitle)
+        VStack(alignment: .center) {
+            Image("helmet") // Use default profile picture if no photo selected
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .foregroundColor(Color.blue)
+                                    .frame(width: 150, height: 175)
+                                .padding()
+        }
+        
         VStack {
-                // Picker to select a title from the beginner titles array
+           // Picker to select a title from the titles array
             Picker("Select Title", selection: $selectedTitleIndex) {
                         ForEach(0..<viewModel.availableTitles.count, id: \.self) { index in
                             Text(viewModel.availableTitles[index]).tag(index)
                         }
-                    } 
-
+                    }
+                .accentColor(.orange)
                 .pickerStyle(DefaultPickerStyle())
-                .padding()
                 }
+        
         // Info
         VStack(alignment: .leading){
-            
-            HStack{
-                Text("Name: ")
-                    .bold()
-                Text(user.name)
-            }
             HStack{
                 Text("Email: ")
                     .bold()
                 Text(user.email)
             }
+            .padding()
             HStack{
-                Text("Member Since: ")
+                Text("Here Since: ")
                     .bold()
                 Text("\(Date(timeIntervalSince1970: user.joined).formatted(date:.abbreviated, time: .shortened))")
             }
+            .padding()
             HStack{
                 Text("Valor: ")
                     .bold()
                 Text("\(user.userLevel)")
             }
+            .padding()
         }
+        .foregroundColor(.white)
+        .font(.system(size:18))
+        .bold()
         Button("Sign Out"){
             viewModel.logOut()
         }
-        .tint(.red)
+        .tint(.white)
+        .monospaced()
+        .bold()
+        .cornerRadius(8)
+        .background(.red)
         .padding()
     
     }
+        
 }
         
 
 #Preview {
     ProfileView()
 }
-
-
-/*
- Replace profile with user name uptop
- icon showing avatar
- Title right below
- valor
- pickable color
- 
- */
