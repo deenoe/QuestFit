@@ -1,3 +1,8 @@
+//  QuestFit
+//
+//  Created by Miguel Bunag & Ricardo Lopez
+//
+
 import SwiftUI
 
 struct TLButton: View {
@@ -22,7 +27,6 @@ struct TLButton: View {
 struct TLButton_Previews: PreviewProvider {
     static var previews: some View {
         TLButton(title: "Value", background: .black) {
-            // Action
         }
     }
 }

@@ -1,8 +1,8 @@
 //
 //  ProfileViewViewModel.swift
-//  RaccoonRemind
+//  QuestFit
 //
-//  Created by Miguel Bunag on 5/3/24.
+//  Created by Miguel Bunag & Ricardo Lopez
 //
 
 import SwiftUI
@@ -20,8 +20,6 @@ class ProfileViewViewModel: ObservableObject{
     }
     
     
-    // func levelUp
-    // update a value with a document, given a user ID
     func fetchUser() {
         guard let userId = Auth.auth().currentUser?.uid else{
             return
@@ -37,7 +35,7 @@ class ProfileViewViewModel: ObservableObject{
                     name: data["name"] as? String ?? "",
                     email: data["email"] as? String ?? "",
                     joined: data["joined"] as? TimeInterval ?? 0,
-                    userLevel: data["userLevel"] as? Int ?? 12)//I think since it is not set in Firebase, it defaults to the optional value of 12
+                    userLevel: data["userLevel"] as? Int ?? 0)
                 
                 if let userLevel = self?.user?.userLevel {
                                 self?.updateAvailableTitles(userLevel: userLevel)
@@ -96,7 +94,6 @@ class ProfileViewViewModel: ObservableObject{
     }
 
 
-
     func updateAvailableTitles(userLevel: Int) {
             if userLevel < 100 {
                 availableTitles = TitleData.beginnerTitles
@@ -108,10 +105,5 @@ class ProfileViewViewModel: ObservableObject{
                 availableTitles = TitleData.beginnerTitles + TitleData.intermediateTitles + TitleData.advancedTitles + TitleData.expertTitles
             }
         }
-    
-    
-//    func selectedPhoto(){
-//        userPic = Image("knight")
-//    }
     
     }

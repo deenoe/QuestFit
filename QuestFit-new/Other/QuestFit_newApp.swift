@@ -1,8 +1,8 @@
 //
 //  RaccoonRemindApp.swift
-//  RaccoonRemind
+//  QuestFit
 //
-//  Created by Miguel Bunag on 5/2/24.
+//  Created by Miguel Bunag & Ricardo Lopez
 //
 import FirebaseCore
 import SwiftUI

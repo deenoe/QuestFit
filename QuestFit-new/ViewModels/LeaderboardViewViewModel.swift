@@ -2,7 +2,7 @@
 //  LeadViewModel.swift
 //  QuestFit
 //
-//  Created by Miguel Bunag on 3/8/24.
+//  Created by Miguel Bunag & Ricardo Lopez
 //
 
 import Firebase

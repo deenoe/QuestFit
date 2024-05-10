@@ -1,7 +1,7 @@
 //  ProfileView.swift
-//  Questfit
+//  QuestFit
 //
-//  Created by Miguel Bunag on 5/3/24.
+//  Created by Miguel Bunag & Ricardo Lopez
 //
 
 import SwiftUI

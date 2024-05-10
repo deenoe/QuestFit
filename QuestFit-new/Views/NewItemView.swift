@@ -1,8 +1,8 @@
 //
 //  NewItemView.swift
-//  RaccoonRemind
+//  QuestFit
 //
-//  Created by Miguel Bunag on 5/3/24.
+//  Created by Miguel Bunag & Ricardo Lopez
 //
 
 import SwiftUI
@@ -42,7 +42,7 @@ struct NewItemView: View {
             .alert(isPresented: $viewModel.showAlert) {
                 Alert(
                     title: Text("Error"),
-                    message: Text("Please fill in all fields and select due date new than today. "))
+                    message: Text("Please fill in all fields. "))
             }
         }
     }

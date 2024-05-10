@@ -1,7 +1,8 @@
 //
 //  Leaderboard.swift
-//  QuestFit-new
+//  QuestFit
 //
+//  Created by Miguel Bunag & Ricardo Lopez
 //
 
 import Foundation

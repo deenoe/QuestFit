@@ -1,8 +1,8 @@
 //
 //  LoadWorkouts.swift
-//  QuestFit-new
+//  QuestFit
 //
-//  Created by Miguel Bunag on 5/5/24.
+//  Created by Miguel Bunag & Ricardo Lopez
 //
 import FirebaseFirestore
 

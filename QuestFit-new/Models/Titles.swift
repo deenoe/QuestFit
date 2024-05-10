@@ -1,8 +1,8 @@
 //
 //  Titles.swift
-//  QuestFit-new
+//  QuestFit
 //
-//  Created by Max Lopez on 5/8/24.
+//  Created by Miguel Bunag & Ricardo Lopez
 //
 
 import Foundation
